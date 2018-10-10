@@ -7,11 +7,11 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="{{Request::is('home') ? 'active' : ''}}"><a href='home'>Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Production <span class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href='/vegetable'>Vegetables</a></li>
-          <li><a href='/fruit'>Fruits</a></li>
-          <li><a href='/others'>Others</a></li>
+          <li><a href='/vegetable'>Dp1</a></li>
+          <li><a href='/fruit'>Dp2</a></li>
+          <li><a href='/others'>Dp3</a></li>
         </ul>
       </li>
       <li class="{{Request::is('messages') ? 'active' : ''}}"><a href='messages'>Messages</a></li>
