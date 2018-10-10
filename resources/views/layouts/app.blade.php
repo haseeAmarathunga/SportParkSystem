@@ -50,9 +50,47 @@
             </div>
         </div>
 
-    <footer id="footer" class="text-center">
-        <p>All right reserved 2018 &copy; hasee'sArt</p>
-    </footer>
+ 
+
+ 
+<!-- footer -->
+<section class="footer">
+	<div class="container">
+		<div class="agileinfo-grids">
+			<div class="agile-grid-left agile-grid-right">
+				<h4>Keep Updated On Social Media</h4>
+				<div class="social">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-rss"></i></a></li>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="#"><i class="fa fa-vk"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="agile-nav">
+			<ul>
+            <li class="{{Request::is('home') ? 'active' : ''}}"><a href='home'>Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href='/vegetable'>Dp1</a></li>
+                <li><a href='/fruit'>Dp2</a></li>
+                <li><a href='/others'>Dp4</a></li>
+            </ul>
+            </li>
+            <li class="{{Request::is('messages') ? 'active' : ''}}"><a href='messages'>Messages</a></li>
+            <li class="{{Request::is('contact') ? 'active' : ''}}"><a href='contact'>Contact</a></li>
+            <li class="{{Request::is('plans') ? 'active' : ''}}"><a href='plans'>Pricing Plans</a></li>
+            <li class="{{Request::is('about') ? 'active' : ''}}"><a href='about'>About</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+<!-- //footer -->
     
     
 </body>
