@@ -15,6 +15,7 @@ Route::get('/','PagesController@getHome');
 Route::get('/about','PagesController@getAbout');
 Route::get('/contact','PagesController@getContact');
 Route::get('/home','PagesController@getHome');
+Route::get('/plans','PagesController@getPlans');
 
 Route::get('/messages','MessagesController@getMessages');
 
