@@ -18,4 +18,8 @@ class PagesController extends Controller
     public function getPlans(){
         return view('plans');
     }
+
+    public function getLogin(){
+        return view('login');
+    }
 }
