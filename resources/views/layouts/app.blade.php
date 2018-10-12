@@ -27,7 +27,7 @@
     <script src=js/app.js></script>
 
 </head>
-<body background="img/b1.jpg">
+<body>
 
 
     @include('inc.navbar')
