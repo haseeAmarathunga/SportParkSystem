@@ -11,4 +11,4 @@
 				<li><span class="fa fa-globe" aria-hidden="true"></span><a href="#">info@website.com</a></li>
 			</ul>
     </div>
-    @show
+@show

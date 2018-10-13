@@ -46,7 +46,10 @@
                 @yield('content')
             </div>
             <div class="col-md-4 col-lg-4">
-                @include('inc.sidebar')
+				@if(Request::is('about'))
+        			@include('inc.sidebar')
+    			@endif
+               
             </div>
         </div>
 
