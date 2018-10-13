@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<script src="js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
 	<!-- default css files -->
 	
 	<!--web font-->
@@ -25,6 +27,8 @@
 	<!--//web font-->
 
     <script src=js/app.js></script>
+	<style>
+	</style>
 
 </head>
 <body>
@@ -52,8 +56,9 @@
                
             </div>
         </div>
-
- 
+@if(Request::is('home'))
+<img src="img/b1.jpg">
+@endif
 
  
 <!-- footer -->
@@ -94,7 +99,8 @@
 	</div>
 </section>
 <!-- //footer -->
-    
-    
+
+
+
 </body>
 </html>
