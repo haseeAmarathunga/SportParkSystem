@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="signin-form profile">
-			<h3>Sign Up</h3>
+			<h2>Sign Up</h2>
 			<div class="login-form">
 				<form action="#" method="post">
 					<input type="text" name="name" placeholder="Username" required="">
@@ -12,7 +12,7 @@
 					<input type="password" name="password" placeholder="Confirm Password" required="">
 					<input type="submit" value="Sign Up">
 					</br>or</br>
-					<a href=""><button class="btn btn-success">Login</button></a>
+					<a href=""><button class="btn btn-warning">Login</button></a>
 				</form>
 			</div>
 			
