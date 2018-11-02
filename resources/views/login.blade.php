@@ -11,7 +11,10 @@
 					<input type="password" name="password" placeholder="Password" required="">
 					<input type="password" name="password" placeholder="Confirm Password" required="">
 					<input type="submit" value="Sign Up">
+					</br>or</br>
+					<a href=""><button class="btn btn-success">Login</button></a>
 				</form>
 			</div>
+			
 		</div>
 @endsection

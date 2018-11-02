@@ -59,7 +59,9 @@
 @if(Request::is('home'))
 <img src="img/b1.jpg">
 @endif
-
+@if(Request::is('/'))
+<img src="img/b1.jpg">
+@endif
  
 <!-- footer -->
 <section class="footer">

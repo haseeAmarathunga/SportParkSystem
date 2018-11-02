@@ -1239,7 +1239,7 @@ button::-moz-focus-inner {
 .signin-form input[type="submit"] {
     outline: none;
     padding: 0.9em 0;
-    width: 100%;
+    width: 50%;
     text-align: center;
     font-size: 1em;
     margin-top: 1em;
