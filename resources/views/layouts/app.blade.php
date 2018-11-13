@@ -53,6 +53,11 @@
 				@if(Request::is('about'))
         			@include('inc.sidebar')
     			@endif
+
+				@if(Request::is('home'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('loginwin'))
         			@include('inc.sidebar')
     			@endif
@@ -67,12 +72,9 @@
                
             </div>
         </div>
-@if(Request::is('home'))
-<img src="img/b1.jpg">
-@endif
-@if(Request::is('/'))
-<img src="img/b1.jpg">
-@endif
+
+
+
  
 <!-- footer -->
 <section class="footer">

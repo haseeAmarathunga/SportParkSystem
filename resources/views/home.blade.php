@@ -1,12 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<font color="#ccc">
-<h2><span class="glyphicon glyphicon-home"></span> Home</h2>
-</font>
-@endsection
+<img src="img/b1.jpg">
 
 @section('sidebar')
 @parent
-<p>This is a pharagraph.</p>
+
+@endsection
 @endsection
