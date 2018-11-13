@@ -3,9 +3,9 @@
 <div class="p-3 mb-2 bg-success text-white">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <!--<div class="navbar-header">
-      <a class="navbar-brand" href="#">Blue Feather</a>
-    </div>-->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" width="40" height="40"></a>
+    </div>
     <ul class="nav navbar-nav">
       <li class="{{Request::is('home') ? 'active' : ''}}"><a href='home'>Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
@@ -19,7 +19,7 @@
       <li class="{{Request::is('contact') ? 'active' : ''}}"><a href='contact'>Contact</a></li>
       <li class="{{Request::is('plans') ? 'active' : ''}}"><a href='plans'>Pricing Plans</a></li>
       <li class="{{Request::is('about') ? 'active' : ''}}"><a href='about'>About</a></li>
-      <li class="{{Request::is('login') ? 'active' : ''}}"><a href='login'>LOGIN</a></li>
+      <li class="{{Request::is('login') ? 'active' : ''}}"><a href='loginwin'>LOGIN</a></li>
     </ul>
 
     <div class="pull-right">

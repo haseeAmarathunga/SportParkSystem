@@ -8,16 +8,16 @@
 
     <div class="form-group">
         {{Form::label('name','Name')}}
-        {{Form::text('name','',['class'=>'form-control','placeholder'=>'Enter Name'])}}
+        {{Form::text('name','',['class'=>'form-control','placeholder'=>'Enter Name','required'])}}
     </div>
 
     <div class="form-group">
         {{Form::label('email','Email')}}
-        {{Form::text('email','',['class'=>'form-control','placeholder'=>'someone@gmail.com'])}}
+        {{Form::text('email','',['class'=>'form-control','placeholder'=>'someone@gmail.com','required'])}}
     </div>
     <div class="form-group">
         {{Form::label('message','Message')}}
-        {{Form::textarea('message','',['class'=>'form-control','placeholder'=>'Enter Message'])}}
+        {{Form::textarea('message','',['class'=>'form-control','placeholder'=>'Enter Message','required'])}}
     </div>
 
     <div>
