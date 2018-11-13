@@ -22,4 +22,8 @@ class PagesController extends Controller
     public function getLogin(){
         return view('login');
     }
+
+    public function getLoginWin(){
+        return view('loginwin');
+    }
 }

@@ -53,6 +53,13 @@
 				@if(Request::is('about'))
         			@include('inc.sidebar')
     			@endif
+				@if(Request::is('loginwin'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('login'))
+        			@include('inc.sidebar')
+    			@endif
                
             </div>
         </div>

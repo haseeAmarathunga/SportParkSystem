@@ -12,9 +12,10 @@
 					<input type="password" name="password" placeholder="Confirm Password" required="">
 					<input type="submit" value="Sign Up">
 					</br>or</br>
+					<font color="#ccc">Already have account ?</br></font>
 					
 				</form>
-				<a href="loginwin"><button class="btn btn-warning">Login</button></a>
+				<a href="loginwin"><button class="btn btn-warning btn-lg">Login</button></a>
 			</div>
 			
 		</div>
