@@ -19,6 +19,10 @@ Route::get('/plans','PagesController@getPlans');
 Route::get('/login','PagesController@getLogin');
 Route::get('/loginwin','PagesController@getLoginWin');
 
+Route::get('/AdminLogin','PagesController@getAdminLogin');
+Route::get('/StaffLogin','PagesController@getStaffLogin');
+
 Route::get('/messages','MessagesController@getMessages');
+
 
 Route::post('/contact/submit','MessagesController@submit');

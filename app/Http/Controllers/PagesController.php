@@ -26,4 +26,12 @@ class PagesController extends Controller
     public function getLoginWin(){
         return view('loginwin');
     }
+
+    public function getAdminLogin(){
+        return view('AdminLogin');
+    }
+
+    public function getStaffLogin(){
+        return view('StaffLogin');
+    }
 }

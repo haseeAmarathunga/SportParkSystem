@@ -60,6 +60,10 @@
 				@if(Request::is('login'))
         			@include('inc.sidebar')
     			@endif
+
+				@if(Request::is('AdminLogin'))
+					@include('inc.adminloginbar')
+				@endif
                
             </div>
         </div>
