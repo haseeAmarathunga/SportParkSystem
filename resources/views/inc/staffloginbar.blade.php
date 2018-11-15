@@ -3,9 +3,9 @@
 		
 	<div class="login-form">
     <!-- show the error message, if login details incorrect -->
-    @if(isset(Auth::user()->email))
+    <!-- @if(isset(Auth::user()->email))
         <script>window.location="/staffmenu";</script>
-    @endif
+    @endif -->
     
     @if($message=Session::get('error'))
     <div class="alert alert-danger alert-block">
