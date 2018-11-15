@@ -54,7 +54,11 @@
         			@include('inc.sidebar')
     			@endif
 
-				@if(Request::is('home'))
+				 @if(Request::is('home'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('/'))
         			@include('inc.sidebar')
     			@endif
 

@@ -26,3 +26,7 @@ Route::get('/messages','MessagesController@getMessages');
 
 
 Route::post('/contact/submit','MessagesController@submit');
+
+Route::post('AdminLogin/checklogin','MainController@checklogin');
+Route::get('AdminLogin/adminmenu','MainController@successlogin');
+Route::get('AdminLogin/logout','MainController@logout');

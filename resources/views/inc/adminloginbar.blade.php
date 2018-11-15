@@ -2,8 +2,30 @@
     <div class="well">
 		
 	<div class="login-form">
+    <!-- show the error message, if login details incorrect -->
+    @if(isset(Auth::user()->username))
+        <script>window.location="/adminlogin/adminmenu";</script>
+    @endif
+    
+    @if($message=Session::get('error'))
+    <div class="alert alert-danger alert-block">
+        <button type="button" class="close" data-dismiss="alert"></button>
+        <strong>{{$message}}</strong>
+    </div>
+    @endif
+    
+    @if(count($errors)>0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <!-- <form method="POST"> -->
-    {!! Form::open(['url'=>'AdminLogin/login']) !!}
+    {!! Form::open(['url'=>'/AdminLogin/checklogin']) !!}
         <h2 class="text-center"><span class="glyphicon glyphicon-user"></span> Admin Login</h2>   
         <div class="form-group">
             <div class="input-group">
@@ -31,7 +53,5 @@
     <p class="text-center text-muted small">Don't have an account? <a href="#">Sign up here!</a></p>
 </div>
 
-    </div>
-
-    
+    </div>  
 @show
