@@ -1,0 +1,3 @@
+@section('messagebar')
+
+@endsection

@@ -2,10 +2,7 @@
 
 @section('content')
 
-    <img src="img/a.jpg">
-
-  
-
+    <img src="img/staff.jpg">
 
 
 @endsection

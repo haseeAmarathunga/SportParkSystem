@@ -41,6 +41,13 @@
     @if(Request::is('home'))
         @include('inc.showcase')
     @endif
+	@if(Request::is('adminmenu'))
+        @include('inc.adminshowcase')
+    @endif
+
+	@if(Request::is('staffmenu'))
+        @include('inc.staffshowcase')
+    @endif
 
        
         <div class="row">
@@ -73,7 +80,11 @@
 				@if(Request::is('AdminLogin'))
 					@include('inc.adminloginbar')
 				@endif
-               
+
+				@if(Request::is('StaffLogin'))
+					@include('inc.staffloginbar')
+				@endif
+
             </div>
         </div>
 

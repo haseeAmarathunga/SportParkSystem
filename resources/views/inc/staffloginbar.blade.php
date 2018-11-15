@@ -1,10 +1,10 @@
-@section('adminloginbar')
+@section('staffloginbar')
     <div class="well">
 		
 	<div class="login-form">
     <!-- show the error message, if login details incorrect -->
     @if(isset(Auth::user()->email))
-        <script>window.location="/adminmenu";</script>
+        <script>window.location="/staffmenu";</script>
     @endif
     
     @if($message=Session::get('error'))
@@ -25,8 +25,8 @@
     @endif
 
     <!-- <form method="POST"> -->
-    {!! Form::open(['url'=>'/AdminLogin/checklogin']) !!}
-        <h2 class="text-center"><span class="glyphicon glyphicon-user"></span> Admin Login</h2>   
+    {!! Form::open(['url'=>'/StaffLogin/checklogin']) !!}
+        <h2 class="text-center"><span class="glyphicon glyphicon-user"></span> Staff Login</h2>   
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -40,7 +40,7 @@
             </div>
         </div>        
         <div class="form-group">
-            {{Form::submit('Login',['class'=>'btn btn-warning btn-block'])}}
+            {{Form::submit('Login',['class'=>'btn btn-success btn-block'])}}
         </div>
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>

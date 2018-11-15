@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Validator;
 use Auth;
-class MainController extends Controller
+use Validator;
+class StaffController extends Controller
 {
     //
     function checklogin(Request $request)
@@ -20,14 +20,14 @@ class MainController extends Controller
             'email' => $request->get('username'),
             'password' => $request->get('password')
         );
-        $username=$request->get('username');
+
         // $email = $request->get('username');
         // $password = $request->get('password');
         
-        if(Auth::attempt($user_data) && $username=='admin')
+        if(Auth::attempt($user_data))
         // if($email=="admin" && $password="ha123")
         {
-            return redirect('adminmenu');
+            return redirect('staffmenu');
         }else
         {
             return back()->with('error','Wrong Login Details!');
@@ -35,13 +35,13 @@ class MainController extends Controller
     }
     function successlogin()
     {
-        return view('adminmenu');
+        return view('staffmenu');
     }
 
     function logout()
     {
         Auth::logout();
-        return redirect('/AdminLogin');
+        return redirect('/StaffLogin');
     }
 
 }

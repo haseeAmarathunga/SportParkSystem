@@ -24,9 +24,13 @@ Route::get('/StaffLogin','PagesController@getStaffLogin');
 
 Route::get('/messages','MessagesController@getMessages');
 
-
+Route::Auth();
 Route::post('/contact/submit','MessagesController@submit');
 
 Route::post('AdminLogin/checklogin','MainController@checklogin');
-Route::get('AdminLogin/adminmenu','MainController@successlogin');
-Route::get('AdminLogin/logout','MainController@logout');
+Route::get('/adminmenu','MainController@successlogin');
+Route::get('/AdminLogin/logout','MainController@logout');
+
+Route::post('StaffLogin/checklogin','StaffController@checklogin');
+Route::get('/staffmenu','StaffController@successlogin');
+Route::get('/logout','StaffController@logout');

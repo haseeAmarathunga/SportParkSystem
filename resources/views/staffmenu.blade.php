@@ -6,10 +6,10 @@
     <div class="alert alert-success success-block">
         <strong>Welcome {{Auth::user()->username}}</strong>
         <br/>
-        <a href="{{url('AdminLogin/logout')}}">Logout</a>
+        <a href="{{url('/logout')}}">Logout</a>
     </div>
 @else
-    <script>window.location="/AdminLogin";</script>
+    <script>window.location="/StaffLogin";</script>
 @endif
 
 @endsection
