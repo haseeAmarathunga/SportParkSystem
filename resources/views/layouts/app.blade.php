@@ -61,12 +61,16 @@
         			@include('inc.sidebar')
     			@endif
 
-				 @if(Request::is('home'))
+				@if(Request::is('signup'))
         			@include('inc.sidebar')
     			@endif
 
+				 @if(Request::is('home'))
+        			@include('inc.customerloginbar')
+    			@endif
+
 				@if(Request::is('/'))
-        			@include('inc.sidebar')
+        			@include('inc.customerloginbar')
     			@endif
 
 				@if(Request::is('loginwin'))

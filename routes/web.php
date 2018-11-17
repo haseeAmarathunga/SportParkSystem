@@ -18,11 +18,12 @@ Route::get('/home','PagesController@getHome');
 Route::get('/plans','PagesController@getPlans');
 Route::get('/login','PagesController@getLogin');
 Route::get('/loginwin','PagesController@getLoginWin');
+Route::get('/signup','PagesController@getSignup');
 
 Route::get('/AdminLogin','PagesController@getAdminLogin');
 Route::get('/StaffLogin','PagesController@getStaffLogin');
 
-Route::get('/messages','MessagesController@getMessages');
+Route::get('/messages','MainController@getMessages');
 
 Route::Auth();
 Route::post('/contact/submit','MessagesController@submit');
@@ -34,3 +35,7 @@ Route::get('/AdminLogin/logout','MainController@logout');
 Route::post('StaffLogin/checklogin','StaffController@checklogin');
 Route::get('/staffmenu','StaffController@successlogin');
 Route::get('/logout','StaffController@logout');
+
+Route::post('customerlogin/checklogin','CustomerController@checklogin');
+Route::get('/customermenu','CustomerController@successlogin');
+Route::get('/logout','CustomerController@logout');

@@ -34,4 +34,8 @@ class PagesController extends Controller
     public function getStaffLogin(){
         return view('StaffLogin');
     }
+
+    public function getSignup(){
+        return view('signup');
+    }
 }

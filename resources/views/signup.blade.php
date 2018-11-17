@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<img src="img/b1.jpg">
 
-@section('customerloginbar')
+@section('sidebar')
 @parent
 
-@endsection
 @endsection
