@@ -16,7 +16,9 @@
         </ul>
       </li>
       <li class="{{Request::is('contact') ? 'active' : ''}}"><a href='contact'>Contact</a></li>
+      @if(Request::is('customers'))
       <li class="{{Request::is('plans') ? 'active' : ''}}"><a href='plans'>Pricing Plans</a></li>
+      @endif
       <li class="{{Request::is('about') ? 'active' : ''}}"><a href='about'>About</a></li>
       <li class="{{Request::is('loginwin') ? 'active' : ''}}"><a href='loginwin'>LOGIN</a></li>
       <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
