@@ -38,4 +38,12 @@ class PagesController extends Controller
     public function getSignup(){
         return view('signup');
     }
+
+    public function getNext(){
+        return view('next');
+    }
+
+    public function getCustomers(){
+        return view('customers');
+    }
 }

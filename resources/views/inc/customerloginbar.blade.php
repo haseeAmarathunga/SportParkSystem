@@ -31,7 +31,7 @@
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                {{Form::text('username','',['class'=>'form-control','placeholder'=>'Username','required'])}}           
+                {{Form::text('username','',['class'=>'form-control','placeholder'=>'Email','required'])}}           
             </div>
         </div>
         <div class="form-group">

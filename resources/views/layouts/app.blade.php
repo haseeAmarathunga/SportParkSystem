@@ -65,6 +65,10 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('customers'))
+        			@include('inc.sidebar')
+    			@endif
+
 				 @if(Request::is('home'))
         			@include('inc.customerloginbar')
     			@endif
