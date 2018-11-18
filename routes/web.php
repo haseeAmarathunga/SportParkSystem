@@ -21,11 +21,16 @@ Route::get('/loginwin','PagesController@getLoginWin');
 Route::get('/signup','PagesController@getSignup');
 Route::get('/next','PagesController@getNext');
 
+
 Route::get('/AdminLogin','PagesController@getAdminLogin');
 Route::get('/StaffLogin','PagesController@getStaffLogin');
 Route::get('/customers','PagesController@getCustomers');
 
 Route::get('/messages','MainController@getMessages');
+Route::get('/staffreg','MainController@StaffReg');
+Route::get('/staffnextreg','PagesController@getStaffNext');
+Route::post('/staffreg/finish','StaffController@submit');
+
 Route::get('/customers','CustomerController@getCustomers');
 
 Route::Auth();
@@ -36,8 +41,11 @@ Route::get('/adminmenu','MainController@successlogin');
 Route::get('/AdminLogin/logout','MainController@logout');
 
 Route::post('StaffLogin/checklogin','StaffController@checklogin');
-Route::get('/staffmenu','StaffController@successlogin');
+Route::get('/staffs','StaffController@successlogin');
 Route::get('StaffLogin/logout','StaffController@logout');
+Route::post('/staffreg/store','StaffController@store');
+
+Route::get('/staffs','StaffController@getStaff');
 
 Route::post('customerlogin/checklogin','CustomerController@checklogin');
 Route::get('/customermenu','CustomerController@successlogin');

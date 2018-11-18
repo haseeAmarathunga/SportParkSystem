@@ -26,7 +26,7 @@ class CustomerController extends Controller
         // $email = $request->get('username');
         // $password = $request->get('password');
         
-        if(Auth::attempt($user_data))
+        if(Auth::attempt($user_data) && Auth::user()->isadmin==0)
         // if($email=="admin" && $password="ha123")
         {
             return redirect('customers');

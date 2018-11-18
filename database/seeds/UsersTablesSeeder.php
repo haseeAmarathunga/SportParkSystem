@@ -16,6 +16,7 @@ class UsersTablesSeeder extends Seeder
             'username' => 'admin',
             'email' => 'admin',
             'password' => Hash::make('password'),
+            'isadmin' =>true,
             'remember_token' => str_random(10)
         ]);
     }

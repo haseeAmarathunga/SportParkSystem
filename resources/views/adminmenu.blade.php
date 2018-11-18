@@ -14,7 +14,7 @@
 
 <div>
     <a href="messages"><button class="btn btn-primary btn-lg">Messages</button></a>
-    <a href=""><button class="btn btn-success btn-lg">Register Staff</button></a>
+    <a href="staffreg"><button class="btn btn-success btn-lg">Register Staff</button></a>
 </div>
 
 

@@ -49,5 +49,13 @@ class MainController extends Controller
         $messages=Message::all();
         return view('messages')->with('messages',$messages);
     }
+    public function StaffReg(){
+        return view('staffreg');
+    }
+
+    public function StaffNextReg(){
+        return view('staffnextreg');
+    }
+
 
 }

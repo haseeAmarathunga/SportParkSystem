@@ -27,6 +27,7 @@
     <!-- <form method="POST"> -->
     {!! Form::open(['url'=>'/AdminLogin/checklogin']) !!}
         <h2 class="text-center"><span class="glyphicon glyphicon-user"></span> Admin Login</h2>   
+        <hr>
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>

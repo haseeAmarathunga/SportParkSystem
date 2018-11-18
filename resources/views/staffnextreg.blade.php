@@ -10,12 +10,19 @@
 <h3>Personal Details</h3>
 </div>
 <hr>
-{!! Form::open(['url'=>'signup/finish']) !!}
+{!! Form::open(['url'=>'staffreg/finish']) !!}
 
 <div class="form-group">
     {{Form::label('username','Username')}}
     {{Form::text('username','',['class'=>'form-control','placeholder'=>'Enter Username','required'])}}
 </div>
+
+<div class="form-group">
+    {{Form::label('potision','Potision')}}
+    {{Form::select('position',['Athletic Trainer','Physical Therapist'
+    ,'Medical Assistance','Sport Trainer','Badminton Trainer','Other'],'Athletic Trainer',['class'=>'form-control','id'=>'position'])}}
+</div>
+
 <div class="form-group">
     {{Form::label('firstname','First Name')}}
     {{Form::text('firstname','',['class'=>'form-control','placeholder'=>'Enter First Name','required'])}}

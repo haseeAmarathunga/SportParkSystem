@@ -27,8 +27,7 @@
 	<!--//web font-->
 
     <script src=js/app.js></script>
-	<style>
-	</style>
+	
 
 </head>
 <body>
@@ -45,7 +44,7 @@
         @include('inc.adminshowcase')
     @endif
 
-	@if(Request::is('staffmenu'))
+	@if(Request::is('staffs'))
         @include('inc.staffshowcase')
     @endif
 
@@ -66,6 +65,10 @@
     			@endif
 
 				@if(Request::is('customers'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('staffs'))
         			@include('inc.sidebar')
     			@endif
 

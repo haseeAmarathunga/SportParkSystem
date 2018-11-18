@@ -27,10 +27,11 @@
     <!-- <form method="POST"> -->
     {!! Form::open(['url'=>'/StaffLogin/checklogin']) !!}
         <h2 class="text-center"><span class="glyphicon glyphicon-user"></span> Staff Login</h2>   
+        <hr>
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                {{Form::text('username','',['class'=>'form-control','placeholder'=>'Username','required'])}}           
+                {{Form::text('username','',['class'=>'form-control','placeholder'=>'Email','required'])}}           
             </div>
         </div>
         <div class="form-group">

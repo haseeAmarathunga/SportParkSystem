@@ -46,4 +46,10 @@ class PagesController extends Controller
     public function getCustomers(){
         return view('customers');
     }
+
+    public function getStaffNext(){
+        return view('staffnextreg');
+    }
+
+    
 }
