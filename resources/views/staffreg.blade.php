@@ -6,6 +6,7 @@
 @parent
 @endsection
 
+<!-- add login details for register staff -->
 <div>
 <h3>SignUp</h3>
 </div>

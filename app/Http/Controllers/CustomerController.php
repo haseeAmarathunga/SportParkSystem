@@ -9,7 +9,7 @@ use App\User;
 use App\Customer;
 class CustomerController extends Controller
 {
-    //
+    //function for check login details
     function checklogin(Request $request)
     {
         $this->validate($request,[
@@ -27,7 +27,7 @@ class CustomerController extends Controller
         // $password = $request->get('password');
         
         if(Auth::attempt($user_data) && Auth::user()->isadmin==0)
-        // if($email=="admin" && $password="ha123")
+        // Auth::attept() compare the user input email and password match with db value
         {
             return redirect('customers');
         }else
@@ -35,17 +35,18 @@ class CustomerController extends Controller
             return back()->with('error','Wrong Login Details!');
         }
     }
-    function successlogin()
+    function successlogin()//if login details are correct it's go to customers page.
     {
         return view('customers');
     }
 
-    function logout()
+    function logout()//this is for logout 
     {
         Auth::logout();
         return redirect('/home');
     }
 
+    //store the first step login details in user table
     public function store()
     {
         $this->validate(request(),[
@@ -70,6 +71,7 @@ class CustomerController extends Controller
 
     }
 
+    //store the final step personal details in customer table
     public function submit(Request $request){
         $this->validate($request,[
             'username'=>'required',
@@ -81,7 +83,7 @@ class CustomerController extends Controller
             'mobile'=>'required',
         ]);
 
-        //create new message
+        //create a new Customer object
         $customer=new Customer;
         $customer->username = $request->input('username');
         $customer->firstname = $request->input('firstname');
@@ -92,14 +94,14 @@ class CustomerController extends Controller
         $customer->mobile = $request->input('mobile');
       
 
-        //save message
+        //save that customer
         $customer->save();
 
-        //redirect
+        //redirect to the home page
         return redirect('/home')->with('success','Register successfull!');
     }
 
-
+    //load all customers and we can filter that using $customer variable
     public function getCustomers(){
         $customers=Customer::all();
         return view('customers')->with('customers',$customers);

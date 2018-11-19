@@ -1,3 +1,5 @@
+<!-- showcase for admin dashboard -->
+
 <div class="jumbotron text-center">
     <div class="container">
         <div class="navbar-header">

@@ -1,8 +1,9 @@
-
+<!-- include main layout -->
 @extends('layouts.app')
 
 @section('content')
 
+<!-- check if any customer is loggedin -->
 @if(isset(Auth::user()->username))
     <div class="alert alert-success success-block">
         <strong>Welcome {{Auth::user()->username}}</strong>
@@ -13,6 +14,7 @@
     <script>window.location="/home";</script>
 @endif
 
+<!-- show the show case with username and email -->
 <div class="jumbotron text-center">
     <div class="container">
         <div class="navbar-header">
@@ -25,6 +27,7 @@
     </div>
 
 
+<!-- show the profile details in sidebar -->
 </div>
 @if(isset(Auth::user()->username))
     @section('sidebar')
@@ -49,7 +52,9 @@
 
     @endsection
 @else
+<!-- if anyone does not loggedin redirected to home page -->
 <script>window.location="/home";</script>
+
 @endif
 
 @endsection

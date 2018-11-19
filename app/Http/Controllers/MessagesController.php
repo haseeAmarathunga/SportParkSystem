@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Message;
 class MessagesController extends Controller
 {
+    //validate details
     public function submit(Request $request){
         $this->validate($request,[
             'name'=>'required',
@@ -25,7 +26,7 @@ class MessagesController extends Controller
         return redirect('/')->with('success','Message Sent!');
     }
 
-
+    //get saved messages from database message table
     public function getMessages(){
         $messages=Message::all();
         return view('messages')->with('messages',$messages);

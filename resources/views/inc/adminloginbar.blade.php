@@ -1,4 +1,5 @@
 @section('adminloginbar')
+<!-- new section of admin login -->
     <div class="well">
 		
 	<div class="login-form">
@@ -7,6 +8,7 @@
         <script>window.location="/adminmenu";</script>
     @endif -->
     
+    <!-- if that functions return any errors it will show the errors -->
     @if($message=Session::get('error'))
     <div class="alert alert-danger alert-block">
         <button type="button" class="close" data-dismiss="alert"></button>
@@ -24,8 +26,9 @@
         </div>
     @endif
 
-    <!-- <form method="POST"> -->
-    {!! Form::open(['url'=>'/AdminLogin/checklogin']) !!}
+    <!-- form creation -->
+    <!-- form action link -->
+    {!! Form::open(['url'=>'/AdminLogin/checklogin']) !!} 
         <h2 class="text-center"><span class="glyphicon glyphicon-user"></span> Admin Login</h2>   
         <hr>
         <div class="form-group">
@@ -50,7 +53,8 @@
         <div class="or-seperator"><i>or</i></div>
         
         
-    {!! Form::close() !!}
+    {!! Form::close() !!} 
+    <!-- end of the form -->
     <p class="text-center text-muted small">Don't have an account? <a href="#">Sign up here!</a></p>
 </div>
 

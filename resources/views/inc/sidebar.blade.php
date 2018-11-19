@@ -1,3 +1,4 @@
+<!-- sidebar about details -->
 @section('sidebar')
     <div class="well">
  

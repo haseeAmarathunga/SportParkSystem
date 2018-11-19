@@ -1,8 +1,10 @@
+<!-- include main layout -->
 @extends('layouts.app')
 
 @section('content')
 <h1>Messages</h1>
 
+<!-- show all the messages from forum -->
 @if(count($messages)>0)
     @foreach($messages as $message)
         <ul class="list-group">

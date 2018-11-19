@@ -1,3 +1,4 @@
+<!-- include main layout -->
 @extends('layouts.app')
 
 @section('content')

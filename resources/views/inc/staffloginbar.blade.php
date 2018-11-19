@@ -7,6 +7,7 @@
         <script>window.location="/staffmenu";</script>
     @endif -->
     
+    <!-- show the all error messages -->
     @if($message=Session::get('error'))
     <div class="alert alert-danger alert-block">
         <button type="button" class="close" data-dismiss="alert"></button>
@@ -24,7 +25,7 @@
         </div>
     @endif
 
-    <!-- <form method="POST"> -->
+    <!-- form action -->
     {!! Form::open(['url'=>'/StaffLogin/checklogin']) !!}
         <h2 class="text-center"><span class="glyphicon glyphicon-user"></span> Staff Login</h2>   
         <hr>
@@ -51,6 +52,7 @@
         
         
     {!! Form::close() !!}
+    <!-- form end -->
     <p class="text-center text-muted small">Don't have an account? <a href="#">Sign up here!</a></p>
 </div>
 

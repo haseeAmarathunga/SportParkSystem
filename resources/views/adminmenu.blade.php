@@ -1,7 +1,9 @@
+<!-- include main layout -->
 @extends('layouts.app')
 
 @section('content')
 
+<!-- check if admin loggedin -->
 @if(isset(Auth::user()->username))
     <div class="alert alert-success success-block">
         <strong>Welcome {{Auth::user()->username}}</strong>
@@ -12,9 +14,12 @@
     <script>window.location="/AdminLogin";</script>
 @endif
 
+<!-- buttons -->
 <div>
     <a href="messages"><button class="btn btn-primary btn-lg">Messages</button></a>
     <a href="staffreg"><button class="btn btn-success btn-lg">Register Staff</button></a>
+    <a href=""><button class="btn btn-primary btn-lg">Staff</button></a>
+    <a href=""><button class="btn btn-success btn-lg">Customers</button></a>
 </div>
 
 

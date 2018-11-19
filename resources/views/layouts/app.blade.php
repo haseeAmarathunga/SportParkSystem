@@ -1,3 +1,4 @@
+<!-- main layout of the website -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +33,7 @@
 </head>
 <body>
 
-
+	<!-- show the showcase plugins in different site -->
     @include('inc.navbar')
     @if(Request::is('/'))
         @include('inc.showcase')
@@ -47,8 +48,9 @@
 	@if(Request::is('staffs'))
         @include('inc.staffshowcase')
     @endif
-
+	<!-- --- -->
        
+	   <!-- sidebar boostrap properties -->
         <div class="row">
             <div class="col-md-8 col-lg-8">
                 @include('inc.messages')
@@ -72,7 +74,11 @@
         			@include('inc.sidebar')
     			@endif
 
-				 @if(Request::is('home'))
+				@if(Request::is('home'))
+        			@include('inc.customerloginbar')
+    			@endif
+
+				@if(Request::is('contact'))
         			@include('inc.customerloginbar')
     			@endif
 
@@ -101,7 +107,7 @@
 
 
 
- 
+
 <!-- footer -->
 <section class="footer">
 	<div class="container">
@@ -133,8 +139,10 @@
             </li>
             <li class="{{Request::is('messages') ? 'active' : ''}}"><a href='messages'>Messages</a></li>
             <li class="{{Request::is('contact') ? 'active' : ''}}"><a href='contact'>Contact</a></li>
-            <li class="{{Request::is('plans') ? 'active' : ''}}"><a href='plans'>Pricing Plans</a></li>
-            <li class="{{Request::is('about') ? 'active' : ''}}"><a href='about'>About</a></li>
+            @if(Request::is('customers'))
+			<li class="{{Request::is('plans') ? 'active' : ''}}"><a href='plans'>Pricing Plans</a></li>
+            @endif
+			<li class="{{Request::is('about') ? 'active' : ''}}"><a href='about'>About</a></li>
 			</ul>
 		</div>
 	</div>

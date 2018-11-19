@@ -1,3 +1,4 @@
+<!-- welcome show case -->
 <div class="jumbotron text-center">
     <div class="container">
         <div class="navbar-header">

@@ -1,7 +1,9 @@
+<!-- staff profile -->
 @extends('layouts.app')
 
 @section('content')
 
+<!-- check if any staff member is loggedin -->
 @if(isset(Auth::user()->username))
     <div class="alert alert-success success-block">
         <strong>Welcome {{Auth::user()->username}}</strong>
@@ -9,9 +11,11 @@
         <a href="{{url('StaffLogin/logout')}}">Logout</a>
     </div>
 @else
+    <!-- if anyone not loggedin redirect to stff login page -->
     <script>window.location="/StaffLogin";</script>
 @endif
 
+<!-- view the staff meber profile with all the details -->
 @if(isset(Auth::user()->username))
 
     @section('sidebar')

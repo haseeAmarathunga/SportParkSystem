@@ -1,8 +1,9 @@
+<!-- include main layout -->
 @extends('layouts.app')
 
 @section('content')
 
-<!-- pricing plans -->
+<!-- show different pricing plans -->
 <section class="pricing" id="pricing">
 	<div class="container">
 		<h3 class="heading">Pricing <span>Plans</span></h3>

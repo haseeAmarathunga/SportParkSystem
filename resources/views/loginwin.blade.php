@@ -1,7 +1,8 @@
+<!-- login window for admin and staff -->
 @extends('layouts.app')
 
 @section('content')
-
+    <!-- you can check admin and staff login -->
     <img src="img/a.jpg">
 
       <div class ="well"><div class="col-lg-6"></div>

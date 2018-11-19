@@ -1,4 +1,5 @@
 @section('customerloginbar')
+<!-- section for customers login -->
     <div class="well">
 		
 	<div class="login-form">
@@ -7,6 +8,7 @@
         <script>window.location="/staffmenu";</script>
     @endif -->
     
+    <!-- show the error message that functions returns -->
     @if($message=Session::get('error'))
     <div class="alert alert-danger alert-block">
         <button type="button" class="close" data-dismiss="alert"></button>
@@ -24,7 +26,7 @@
         </div>
     @endif
 
-    <!-- <form method="POST"> -->
+    <!-- form action -->
     {!! Form::open(['url'=>'/customerlogin/checklogin']) !!}
         <h2 class="text-center"><span class="glyphicon glyphicon-user"></span> Customers Login</h2>   
         <hr>
@@ -51,6 +53,7 @@
         
         
     {!! Form::close() !!}
+    <!-- end of the form -->
     <p class="text-center text-muted small">Don't have an account? <a href="/signup">Sign up here!</a></p>
 </div>
 

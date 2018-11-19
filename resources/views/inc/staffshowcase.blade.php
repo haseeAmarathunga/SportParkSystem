@@ -1,3 +1,4 @@
+<!-- staff showcase -->
 <div class="jumbotron text-center">
     <div class="container">
         <div class="navbar-header">

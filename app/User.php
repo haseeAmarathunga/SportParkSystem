@@ -20,6 +20,7 @@ class User extends Authenticatable
 
     public function setPasswordAttribute($value)
     {
+        //hash the given password
         $this->attributes['password']=bcrypt($value);
     }
     /**

@@ -6,10 +6,12 @@
 @parent
 @endsection
 
+<!-- add personal details in customer signup -->
 <div>
 <h3>Personal Details</h3>
 </div>
 <hr>
+<!-- form for add personal details of customers -->
 {!! Form::open(['url'=>'signup/finish']) !!}
 
 <div class="form-group">
@@ -49,7 +51,7 @@
 </div>
 
 {!! Form::close() !!}
-
+<!-- end -->
 
 
 

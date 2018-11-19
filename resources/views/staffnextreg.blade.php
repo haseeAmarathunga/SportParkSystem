@@ -1,3 +1,4 @@
+<!-- include main layout -->
 @extends('layouts.app')
 
 @section('content')
@@ -6,6 +7,7 @@
 @parent
 @endsection
 
+<!-- add personal details of staff final step -->
 <div>
 <h3>Personal Details</h3>
 </div>

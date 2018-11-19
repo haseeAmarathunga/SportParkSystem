@@ -6,10 +6,13 @@
 @parent
 @endsection
 
+<!-- //signup for customers -->
+<!-- add login details in first step -->
 <div>
 <h3>SignUp</h3>
 </div>
 <hr>
+
 {!! Form::open(['url'=>'signup/store']) !!}
 
 <div class="form-group">

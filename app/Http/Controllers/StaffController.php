@@ -9,7 +9,7 @@ use App\Staff;
 use App\User;
 class StaffController extends Controller
 {
-    //
+    //validate and check the login details
     function checklogin(Request $request)
     {
         $this->validate($request,[
@@ -23,11 +23,10 @@ class StaffController extends Controller
             'password' => $request->get('password')
         );
 
-        // $email = $request->get('username');
-        // $password = $request->get('password');
-        
+   
         if(Auth::attempt($user_data) && Auth::user()->isadmin==1)
-        // if($email=="admin" && $password="ha123")
+        // check the login details are correct and if the field of isadmin is true
+        //isadmin is true only for staff users
         {
             return redirect('staffs');
         }else
@@ -46,6 +45,7 @@ class StaffController extends Controller
         return redirect('/StaffLogin');
     }
 
+    //validate and store staff login details in users table
     function store()
     {
         $this->validate(request(),[
@@ -56,11 +56,13 @@ class StaffController extends Controller
             'isadmin'=>'required'
 
         ]);
-
+        
+        //if a user is staff user then the isadmin is true
+        //so any time isadmin give true from staff registration form
         $pass1=request('password');
         $pass2=request('password_confirmation');
 
-
+        //check if both passwords are same
         if($pass1==$pass2){
             $user=User::create(request(['username','email','password','isadmin']));
             auth()->login($user);
@@ -72,6 +74,7 @@ class StaffController extends Controller
 
     }
 
+    //validate and store staff personal details in staff table 
     public function submit(Request $request){
         $this->validate($request,[
             'username'=>'required',
@@ -83,10 +86,12 @@ class StaffController extends Controller
             'address'=>'required',
             'mobile'=>'required',
         ]);
-
+        
+        //array for get position from index
         $pos=array('Athletic Trainer','Physical Therapist'
         ,'Medical Assistance','Sport Trainer','Badminton Trainer','Other');
-        //create new message
+
+        //create new staff  member
 
         $staff=new Staff;
         $staff->username = $request->input('username');
@@ -99,7 +104,7 @@ class StaffController extends Controller
         $staff->mobile = $request->input('mobile');
       
 
-        //save message
+        //save staff member
         $staff->save();
 
         //redirect

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//get routes of links
 class PagesController extends Controller
 {
     public function getHome(){

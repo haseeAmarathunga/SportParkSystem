@@ -11,8 +11,8 @@
 					<input type="password" name="password" placeholder="Password" required="">
 					<input type="password" name="password" placeholder="Confirm Password" required="">
 					<input type="submit" value="Sign Up">
-					</br>or</br>
-					<font color="#ccc">Already have account ?</br></font>
+					<br/>or<br/>
+					<font color="#ccc">Already have account ?<br/></font>
 					
 				</form>
 				<a href="loginwin"><button class="btn btn-warning btn-lg">Login</button></a>

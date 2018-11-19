@@ -3,7 +3,7 @@
 @section('content')
 <h1>Contact</h1>
 
-
+<!-- contact forum -->
 {!! Form::open(['url'=>'contact/submit']) !!}
 
     <div class="form-group">
@@ -25,7 +25,7 @@
     </div>
 
 {!! Form::close() !!}
-
-
+<!-- end -->
+<hr> 
 @endsection
 
