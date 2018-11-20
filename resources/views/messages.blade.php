@@ -1,10 +1,13 @@
 <!-- include main layout -->
+
 @extends('layouts.app')
 
+@if(isset(Auth::user()->username))
 @section('content')
 <h1>Messages</h1>
 
 <!-- show all the messages from forum -->
+
 @if(count($messages)>0)
     @foreach($messages as $message)
         <ul class="list-group">
@@ -22,3 +25,7 @@
 @parent
 <p>This is a pharagraph.</p>
 @endsection
+
+@else
+    <script>window.location="/AdminLogin";</script>
+@endif

@@ -16,10 +16,10 @@
 
 <!-- buttons -->
 <div>
-    <a href="messages"><button class="btn btn-primary btn-lg">Messages</button></a>
-    <a href="staffreg"><button class="btn btn-success btn-lg">Register Staff</button></a>
-    <a href=""><button class="btn btn-primary btn-lg">Staff</button></a>
-    <a href=""><button class="btn btn-success btn-lg">Customers</button></a>
+    <a href="messages"><button class="btn btn-primary btn-lg btn-block">Messages</button></a>
+    <a href="staffreg"><button class="btn btn-success btn-lg btn-block">Register Staff</button></a>
+    <a href=""><button class="btn btn-primary btn-lg btn-block">Staff</button></a>
+    <a href=""><button class="btn btn-success btn-lg btn-block">Customers</button></a>
 </div>
 
 
