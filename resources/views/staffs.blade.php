@@ -33,7 +33,10 @@
                     <li class="list-group-item">NIC : <b>{{$staff->nic}}</b></li>
                     <li class="list-group-item">Email : <b>{{$staff->email}}</b></li>
                     <li class="list-group-item">Address : <b>{{$staff->address}}</b></li>
-                    <li class="list-group-item">MobileNo : <b>{{$staff->mobile}}</b></li>
+                    <li class="list-group-item">MobileNo : <b>{{$staff->mobile}}  </b></li>
+                    <li class="list-group-item">
+                    <a href=""><b>Edit <span class="glyphicon glyphicon-edit"></span></b></a></li>
+                   
                 </ul></div>
             @endif
         @endforeach

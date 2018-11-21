@@ -90,6 +90,18 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('staffreg'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('staffnextreg'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('adminmenu'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('login'))
         			@include('inc.sidebar')
     			@endif
@@ -104,7 +116,6 @@
 
             </div>
         </div>
-
 
 
 

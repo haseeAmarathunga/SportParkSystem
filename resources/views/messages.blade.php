@@ -14,6 +14,12 @@
             <li class="list-group-item">Name : {{$message->name}}</li>
             <li class="list-group-item">Email : {{$message->email}}</li>
             <li class="list-group-item">Message : {{$message->message}}</li>
+            <div class="well">
+            <form>
+            <input type="textarea" class="form-control" name='reply' 
+            placeholder="Ente reply message">
+            <a href=""><button class="btn btn-primary">Reply</button></a>
+            </div>
         </ul>
     @endforeach
 
