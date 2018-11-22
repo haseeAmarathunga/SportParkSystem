@@ -23,17 +23,29 @@
 <div class="container">
 <h1>shedules</h1>
 <div class ="col-md-4 well">
-  Add Item
+<div >  <center>Add Item</center></div>
   <br>
   <form action="/action_page.php">
   <div class="form-group">
-    <label for="email">Email address:</label>
+    <label for="email">Item Type:</label>
     <input type="email" class="form-control" id="email">
   </div>
+
   <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd">
+    <label for="email">Item Group:</label>
+    <input type="email" class="form-control" id="email">
   </div>
+
+  <div class="form-group">
+    <label for="email">Day:</label>
+    <input type="date" class="form-control" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Time:</label>
+    <input type="time" class="form-control" id="email">
+  </div>
+
   <div class="form-group form-check">
     <label class="form-check-label">
       <input class="form-check-input" type="checkbox"> Remember me
@@ -43,7 +55,7 @@
 </form>
 </div>
 <div class ="col-md-8 well">
-  View Shedule
+  <div >  <center> View Shedule </center></div>
 </div>
 </div>
 
