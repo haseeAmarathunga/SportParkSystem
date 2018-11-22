@@ -52,5 +52,9 @@ class PagesController extends Controller
         return view('staffnextreg');
     }
 
+    public function getStaffUpdate(){
+        return view('staffupdate');
+    }
+
     
 }

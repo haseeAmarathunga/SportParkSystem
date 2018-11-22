@@ -74,6 +74,10 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('staffupdate'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('home'))
         			@include('inc.customerloginbar')
     			@endif

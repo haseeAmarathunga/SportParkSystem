@@ -111,10 +111,43 @@ class StaffController extends Controller
         return redirect('/adminmenu')->with('success','Register successfull!');
     }
 
+    public function update(Request $request)
+    {
+        $this->validate($request,[
+            'username'=>'required',
+            'firstname'=>'required',
+            'lastname'=>'required',
+            'nic'=>'required',
+            'email'=>'required',
+            'address'=>'required',
+            'mobile'=>'required',
+        ]);
+        
+        $input=$request->only('username','firstname','lastname','nic','email','address','mobile');
+
+        $username=$input['username'];
+        $firstname=$input['firstname'];
+        $lastname=$input['lastname'];
+        $nic=$input['nic'];
+        $email=$input['email'];
+        $address=$input['address'];
+        $mobile=$input['mobile'];
+        
+        $sql="update staff SET firstname='$firstname',lastname='$lastname',nic='$nic',
+        email='$email',address='$address',mobile='$mobile' WHERE username='$username'";
+        \DB::update($sql);
+        return redirect()->to('/staffs');
+    }
 
     public function getStaff(){
         $staffs=Staff::all();
         return view('staffs')->with('staffs',$staffs);
     }
+
+    public function getStaff2(){
+        $staffs=Staff::all();
+        return view('staffupdate')->with('staffs',$staffs);
+    }
+
 
 }

@@ -20,6 +20,7 @@ Route::get('/login','PagesController@getLogin');
 Route::get('/loginwin','PagesController@getLoginWin');
 Route::get('/signup','PagesController@getSignup');
 Route::get('/next','PagesController@getNext');
+Route::get('/staffupdate','PagesController@getStaffUpdate');
 
 
 Route::get('/AdminLogin','PagesController@getAdminLogin');
@@ -44,8 +45,10 @@ Route::post('StaffLogin/checklogin','StaffController@checklogin');
 Route::get('/staffs','StaffController@successlogin');
 Route::get('StaffLogin/logout','StaffController@logout');
 Route::post('/staffreg/store','StaffController@store');
+Route::post('/staffs/update','StaffController@update');
 
 Route::get('/staffs','StaffController@getStaff');
+Route::get('/staffupdate','StaffController@getStaff2');
 
 Route::post('customerlogin/checklogin','CustomerController@checklogin');
 Route::get('/customermenu','CustomerController@successlogin');
