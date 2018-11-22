@@ -54,7 +54,6 @@ class StaffController extends Controller
             'password'=>'required|min:5|confirmed',
             'password_confirmation'=>'required|min:5',
             'isadmin'=>'required'
-
         ]);
         
         //if a user is staff user then the isadmin is true
@@ -150,9 +149,7 @@ class StaffController extends Controller
         $input=$request->only('username','oldpassword','password','password_confirmation');
 
         $username=$input['username'];
-        $oldpassword=$input['oldpassword'];
         $password=$input['password'];
-        $password_confirmation=$input['password_confirmation'];
 
         $dbpass=bcrypt($password);
 
@@ -161,10 +158,14 @@ class StaffController extends Controller
             'password' => $request->get('oldpassword')
         );
 
-        $sql="update users SET password='$dbpass' where username='$username'";
-        \DB::update($sql);
-        return redirect()->to('/staffs');
-
+        if(Auth::attempt(array('username'=>$request->username,'password'=>$request->oldpassword))){
+            $sql="update users SET password='$dbpass' where username='$username'";
+            \DB::update($sql);
+            return redirect()->to('/staffs');
+        }
+        else{
+            return redirect()->to('/staffpasschange')->with('error','Invalid old password!');;
+        }
     }
 
     public function getStaff(){

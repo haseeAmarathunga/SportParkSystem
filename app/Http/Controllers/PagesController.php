@@ -60,5 +60,10 @@ class PagesController extends Controller
         return view('staffpasschange');
     }
 
+    public function getMessageInbox(){
+        return view('messageinbox');
+    }
+
+
     
 }

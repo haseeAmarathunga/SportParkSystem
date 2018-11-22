@@ -52,6 +52,12 @@
     @if($staff->username==Auth::user()->username)
 {!! Form::open(['url'=>'staffs/passchange']) !!}
 
+@if($message=Session::get('error'))
+    <div class="alert alert-danger alert-block">
+        <button type="button" class="close" data-dismiss="alert"></button>
+        <strong>{{$message}}</strong>
+    </div>
+@endif
 <div class="form-group">
     {{Form::label('username','Username')}}
     <div class="input-group">
@@ -65,21 +71,22 @@
     {{Form::label('oldpass','Old Password')}}
     <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-    <input type="password" name="oldpassword" id="oldpassword" value="115150" readonly class="form-control"  required>
+    <input type="password" name="oldpassword" id="oldpassword" placeholder="Old Password"  class="form-control"  required>
 </div></div>
 
 <div class="form-group">
     {{Form::label('newpassword','New Password')}}
     <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-    <input type="password" name="password" id="password" class="form-control" required>
+    <input type="password" name="password" id="password" placeholder="New Password" class="form-control" required>
 </div></div>
 
 <div class="form-group">
     {{Form::label('confirm','Confirm')}}
     <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required>
+    <input type="password" name="password_confirmation" id="password_confirmation" 
+    placeholder="Confirm Password" class="form-control" required>
 </div></div>
 
 <div>

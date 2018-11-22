@@ -22,8 +22,9 @@ Route::get('/signup','PagesController@getSignup');
 Route::get('/next','PagesController@getNext');
 Route::get('/staffupdate','PagesController@getStaffUpdate');
 
-Route::get('/staffpasschange','PagesController@getStaffPassChange');
 
+Route::get('/staffpasschange','PagesController@getStaffPassChange');
+Route::get('/messageinbox','PagesController@getMessageInbox');
 
 Route::get('/AdminLogin','PagesController@getAdminLogin');
 Route::get('/StaffLogin','PagesController@getStaffLogin');
@@ -38,6 +39,9 @@ Route::get('/customers','CustomerController@getCustomers');
 
 Route::Auth();
 Route::post('/contact/submit','MessagesController@submit');
+Route::get('/messageinbox','MessagesController@viewInbox');//staff message
+
+Route::POST('/messagereply','MessagesController@replyMessage');
 
 Route::post('AdminLogin/checklogin','MainController@checklogin');
 Route::get('/adminmenu','MainController@successlogin');

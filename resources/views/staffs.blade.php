@@ -50,5 +50,6 @@
 <script>window.location="/StaffLogin";</script>
 @endif
 
+<a href="/messageinbox"><button class="btn btn-success">Messages</button></a>
 
 @endsection
