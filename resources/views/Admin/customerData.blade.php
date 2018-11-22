@@ -16,9 +16,11 @@
 
 <!-- buttons -->
 
-<div >
+<div class="container">
+  <div class ="col-md-2 "></div>
+  <div class ="col-md-8">
 <center>
-  <table class="table table-bordered table-striped">
+  <table class="table table-striped">
        <tr>
           <th>Customer NIC</th>
           <th>Username </th>
@@ -41,7 +43,9 @@
                  @endforeach
 
   </table>
-<center>
+</center>
+</div>
+    <div class ="col-md-2"></div>
 </div>
 
 

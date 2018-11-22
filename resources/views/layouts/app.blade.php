@@ -52,7 +52,7 @@
 
 	   <!-- sidebar boostrap properties -->
         <div class="row">
-            <div class="col-md-8 col-lg-8">
+            <div class="col-md-12 col-lg-12">
                 @include('inc.messages')
 
                 @yield('content')
