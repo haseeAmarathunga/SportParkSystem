@@ -11,4 +11,25 @@ class AdimnSideCustomerController extends Controller
         $data = Customer::all()->toArray();
         return view('Admin.customerData', compact('data'));
        }
+
+      public function profile($nic){
+        return view('Admin.profile');
+      }
+
+      public function attendence($nic){
+        return view('Admin.attendence');
+      }
+
+      public function shedule($nic){
+        return view('Admin.shedule');
+      }
+
+      public function payment($nic){
+        return view('Admin.payment');
+      }
+
+      public function delete($nic){
+        return view('Admin.delete');
+      }
+
 }

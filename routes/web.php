@@ -68,3 +68,8 @@ Route::post('/signup/finish','CustomerController@submit');
 
 //Adminsidie customer routing
 Route::get('/customersopp','AdimnSideCustomerController@index');
+Route::get('/cus_profile/{nic}','AdimnSideCustomerController@profile');
+Route::get('/cus_attendence/{nic}','AdimnSideCustomerController@attendence');
+Route::get('/cus_shedule/{nic}','AdimnSideCustomerController@shedule');
+Route::get('/cus_payment/{nic}','AdimnSideCustomerController@payment');
+Route::get('/cus_delete/{nic}','AdimnSideCustomerController@delete');

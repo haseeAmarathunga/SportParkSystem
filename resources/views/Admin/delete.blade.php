@@ -32,17 +32,7 @@
           <th>payment</th>
           <th>Remove Customer</th>
       </tr>
-        @foreach($data as $row)
-          <tr>
-            <td>{{$row['nic']}}</td>
-            <td>{{$row['firstname']}}</td>
-            <td><a href="{{url('cus_profile',$row['nic'])}}" class="btn btn-primary btn-block ">Profile</a></td>
-            <td><a href="{{url('cus_attendence',$row['nic'])}}" class="btn btn-primary btn-block ">Mark</a></td>
-            <td><a href="{{url('cus_shedule',$row['nic'])}}" class="btn btn-primary btn-block btn-warning ">View & Create</a></td>
-            <td><a href="{{url('cus_payment',$row['nic'])}}" class="btn btn-primary btn-block btn-info">pay</a></td>
-            <td><a href="{{url('cus_delete',$row['nic'])}}" class="btn btn-primary btn-block btn-danger ">Delete</a></td>
-              <td></td>    </tr>
-                 @endforeach
+      
 
   </table>
 </div>

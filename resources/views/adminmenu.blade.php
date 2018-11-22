@@ -18,14 +18,7 @@
 @endsection
 
 <!-- buttons -->
-<<<<<<< HEAD
 
-<div>
-    <a href="messages"><button class="btn btn-success btn-lg btn-block">Forum Messages</button></a>
-    <a href="staffreg"><button class="btn btn-primary btn-lg btn-block">Register Staff</button></a>
-    <a href="#"><button class="btn btn-success btn-lg btn-block">View Staff</button></a>
-    <a href="{{url('customersopp')}}"><button class="btn btn-primary btn-lg btn-block"> Customers</button></a>
-=======
 <div class="navbar-header">
 <a href="messages">
 <img src="img/icon/message.png" width="200" height="120"></a>
@@ -39,9 +32,9 @@
 <img src="img/icon/staff.png" width="200" height="120"></a>
 </div>
 <div class="navbar-header">
-<a href="">
+<a href="{{url('customersopp')}}">
 <img src="img/icon/customer.png" width="200" height="120"></a>
->>>>>>> 280f9c395eb0f45748c3ae1313952d84c8604b5c
+
 </div>
 
 <hr>
