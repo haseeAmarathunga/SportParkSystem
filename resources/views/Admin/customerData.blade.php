@@ -30,9 +30,20 @@
           <th>Shedule</th>
           <th>payment</th>
           <th>Remove Customer</th>
-                       </tr>
-                      
-                                </table>
+      </tr>
+        @foreach($data as $row)
+          <tr>
+            <td>{{$row['nic']}}</td>
+            <td>{{$row['firstname']}}</td>
+            <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
+              <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
+              <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
+            <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
+            <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
+              <td></td>    </tr>
+                 @endforeach
+
+  </table>
 </div>
 
 
