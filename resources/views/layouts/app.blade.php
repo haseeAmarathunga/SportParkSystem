@@ -78,6 +78,10 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('staffpasschange'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('home'))
         			@include('inc.customerloginbar')
     			@endif

@@ -42,14 +42,15 @@
 @else
 <script>window.location="/StaffLogin";</script>
 @endif
+<div class="well">
 <div>
 <a href="/staffs"><button class="btn btn-default">back</button></a></div><hr>
-<h3><span class="glyphicon glyphicon-edit"></span> Update My Profile</h3>
+<h3><span class="glyphicon glyphicon-lock"></span> Change password</h3>
 <hr>
 
 @foreach($staffs as $staff)
     @if($staff->username==Auth::user()->username)
-{!! Form::open(['url'=>'staffs/update']) !!}
+{!! Form::open(['url'=>'staffs/passchange']) !!}
 
 <div class="form-group">
     {{Form::label('username','Username')}}
@@ -61,61 +62,34 @@
 </div></div>
 
 <div class="form-group">
-    {{Form::label('email','Email')}}
+    {{Form::label('oldpass','Old Password')}}
     <div class="input-group">
-    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="text" name="email" id="email" class="form-control" 
-    value=<?php echo $staff->email;?> required>
+    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+    <input type="password" name="oldpassword" id="oldpassword" value="115150" readonly class="form-control"  required>
 </div></div>
 
 <div class="form-group">
-    {{Form::label('firstname','First Name')}}
+    {{Form::label('newpassword','New Password')}}
     <div class="input-group">
-    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="text" name="firstname" id="firstname" class="form-control" 
-    value=<?php echo $staff->firstname;?> required>
+    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+    <input type="password" name="password" id="password" class="form-control" required>
 </div></div>
 
 <div class="form-group">
-    {{Form::label('lastname','Last Name')}}
+    {{Form::label('confirm','Confirm')}}
     <div class="input-group">
-    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="text" name="lastname" id="lastname" class="form-control" 
-    value=<?php echo $staff->lastname;?> required>
-</div></div>
-
-<div class="form-group">
-    {{Form::label('nic','NIC')}}
-    <div class="input-group">
-    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="text" name="nic" id="nic" class="form-control" 
-    value=<?php echo $staff->nic;?> required>
-</div></div>
-
-<div class="form-group">
-    {{Form::label('address','Address')}}
-    <div class="input-group">
-    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="text" name="address" id="address" class="form-control" 
-    value=<?php echo $staff->address;?> required>
-</div></div>
-
-<div class="form-group">
-    {{Form::label('mobile','Mobile No')}}
-    <div class="input-group">
-    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="text" name="mobile" id="mobile" class="form-control" 
-    value=<?php echo $staff->mobile;?> required>
+    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required>
 </div></div>
 
 <div>
-    {{Form::submit('Update',['class'=>'btn btn-primary'])}}
+    {{Form::submit('change',['class'=>'btn btn-success'])}}
 </div>
 
 {!! Form::close() !!}
     @endif
 @endforeach
 <hr>
-
+</div>
 
 @endsection

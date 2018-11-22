@@ -139,6 +139,34 @@ class StaffController extends Controller
         return redirect()->to('/staffs');
     }
 
+    public function changePass(Request $request)
+    {
+        $this->validate(request(),[
+            'oldpassword'=>'required|min:5',
+            'password'=>'required|min:5|confirmed',
+            'password_confirmation'=>'required|min:5'
+        ]); 
+
+        $input=$request->only('username','oldpassword','password','password_confirmation');
+
+        $username=$input['username'];
+        $oldpassword=$input['oldpassword'];
+        $password=$input['password'];
+        $password_confirmation=$input['password_confirmation'];
+
+        $dbpass=bcrypt($password);
+
+        $user_data=array(
+            'email' => $request->get('username'),
+            'password' => $request->get('oldpassword')
+        );
+
+        $sql="update users SET password='$dbpass' where username='$username'";
+        \DB::update($sql);
+        return redirect()->to('/staffs');
+
+    }
+
     public function getStaff(){
         $staffs=Staff::all();
         return view('staffs')->with('staffs',$staffs);
@@ -147,6 +175,11 @@ class StaffController extends Controller
     public function getStaff2(){
         $staffs=Staff::all();
         return view('staffupdate')->with('staffs',$staffs);
+    }
+
+    public function getStaff3(){
+        $staffs=Staff::all();
+        return view('staffpasschange')->with('staffs',$staffs);
     }
 
 

@@ -56,5 +56,9 @@ class PagesController extends Controller
         return view('staffupdate');
     }
 
+    public function getStaffPassChange(){
+        return view('staffpasschange');
+    }
+
     
 }

@@ -22,6 +22,8 @@ Route::get('/signup','PagesController@getSignup');
 Route::get('/next','PagesController@getNext');
 Route::get('/staffupdate','PagesController@getStaffUpdate');
 
+Route::get('/staffpasschange','PagesController@getStaffPassChange');
+
 
 Route::get('/AdminLogin','PagesController@getAdminLogin');
 Route::get('/StaffLogin','PagesController@getStaffLogin');
@@ -46,9 +48,12 @@ Route::get('/staffs','StaffController@successlogin');
 Route::get('StaffLogin/logout','StaffController@logout');
 Route::post('/staffreg/store','StaffController@store');
 Route::post('/staffs/update','StaffController@update');
+Route::post('/staffs/passchange','StaffController@changePass');
+
 
 Route::get('/staffs','StaffController@getStaff');
 Route::get('/staffupdate','StaffController@getStaff2');
+Route::get('/staffpasschange','StaffController@getStaff3');
 
 Route::post('customerlogin/checklogin','CustomerController@checklogin');
 Route::get('/customermenu','CustomerController@successlogin');
