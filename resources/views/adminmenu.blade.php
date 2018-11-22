@@ -14,16 +14,7 @@
     <script>window.location="/AdminLogin";</script>
 @endif
 @section('sidebar')
-<div class="jumbotron">
-    <a href="messages"><button class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-envelope"></span> Forum Messages</button></a>
-    <a href="staffreg"><button class="btn btn-default btn-lg ">
-    <span class="glyphicon glyphicon-user"></span> Register Staff</button></a>
-    <a href=""><button class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-eye-open"></span> View Staff Details</button></a>
-    <a href=""><button class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-eye-open"></span> View Customers Details</button></a>
-</div>
+
 @endsection
 
 <!-- buttons -->
