@@ -35,11 +35,11 @@
           <tr>
             <td>{{$row['nic']}}</td>
             <td>{{$row['firstname']}}</td>
-            <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
-              <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
-              <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
-            <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
-            <td><a href="" class="btn btn-warning list-group-item ">Edit</a></td>
+            <td><a href="" class="btn btn-primary btn-block ">Profile</a></td>
+              <td><a href="" class="btn btn-primary btn-block ">Mark</a></td>
+              <td><a href="" class="btn btn-primary btn-block ">View & Create</a></td>
+            <td><a href="" class="btn btn-primary btn-block ">pay</a></td>
+            <td><a href="" class="btn btn-primary btn-block ">Delete</a></td>
               <td></td>    </tr>
                  @endforeach
 
