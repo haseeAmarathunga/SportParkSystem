@@ -7,11 +7,11 @@
 
     <link rel="stylesheet" href="css/app.css">
 
-    <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
+    <link href="/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
 	<!-- //for Coaches css -->
 
 	<!-- testimonials css -->
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" /><!-- flexslider css -->
+	<link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" property="" /><!-- flexslider css -->
 	<!-- //testimonials css -->
 
 	<!-- default css files -->
@@ -27,7 +27,7 @@
 	<link href="//fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 	<!--//web font-->
 
-    <script src=js/app.js></script>
+    <script src=/js/app.js></script>
 
 
 </head>
