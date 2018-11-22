@@ -27,30 +27,26 @@
   <br>
   <form action="/action_page.php">
   <div class="form-group">
-    <label for="email">Item Type:</label>
-    <input type="email" class="form-control" id="email">
+    <label for="type">Item Type:</label>
+    <input type="text" class="form-control" id="type" name ="type">
   </div>
 
   <div class="form-group">
-    <label for="email">Item Group:</label>
-    <input type="email" class="form-control" id="email">
+    <label for="group">Item Group:</label>
+    <input type="text" class="form-control" id="group" name = "group">
   </div>
 
   <div class="form-group">
-    <label for="email">Day:</label>
-    <input type="date" class="form-control" id="email">
+    <label for="day">Day:</label>
+    <input type="date" class="form-control" id="day" name = "day">
   </div>
 
   <div class="form-group">
-    <label for="email">Time:</label>
-    <input type="time" class="form-control" id="email">
+    <label for="time">Time:</label>
+    <input type="time" class="form-control" id="time" name = "time">
   </div>
 
-  <div class="form-group form-check">
-    <label class="form-check-label">
-      <input class="form-check-input" type="checkbox"> Remember me
-    </label>
-  </div>
+
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
