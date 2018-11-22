@@ -72,4 +72,4 @@ Route::get('/cus_profile/{nic}','AdimnSideCustomerController@profile');
 Route::get('/cus_attendence/{nic}','AdimnSideCustomerController@attendence');
 Route::get('/cus_shedule/{nic}','AdimnSideCustomerController@shedule');
 Route::get('/cus_payment/{nic}','AdimnSideCustomerController@payment');
-//Route::get('/cus_delete','AdimnSideCustomerController@delete');
+Route::get('/cus_delete','AdimnSideCustomerController@delete');
