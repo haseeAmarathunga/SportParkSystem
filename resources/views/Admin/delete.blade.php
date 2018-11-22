@@ -20,21 +20,8 @@
 
 <!-- buttons -->
 
-<div >
-
-  <table class="table table-bordered table-striped">
-       <tr>
-          <th>Customer NIC</th>
-          <th>Username </th>
-          <th>View Profile</th>
-          <th>Mark Attendence</th>
-          <th>Shedule</th>
-          <th>payment</th>
-          <th>Remove Customer</th>
-      </tr>
-      
-
-  </table>
+<div>
+<h1>delete</h1>
 </div>
 
 

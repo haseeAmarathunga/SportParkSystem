@@ -14,6 +14,7 @@ class AdimnSideCustomerController extends Controller
 
       public function profile($nic){
         return view('Admin.profile');
+        //return redirect()->route('Admin.profile');
       }
 
       public function attendence($nic){
@@ -28,7 +29,7 @@ class AdimnSideCustomerController extends Controller
         return view('Admin.payment');
       }
 
-      public function delete($nic){
+      public function delete(){
         return view('Admin.delete');
       }
 
