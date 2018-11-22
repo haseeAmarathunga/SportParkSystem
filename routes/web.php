@@ -65,3 +65,6 @@ Route::get('/logout','CustomerController@logout');
 
 Route::post('/signup/store','CustomerController@store');
 Route::post('/signup/finish','CustomerController@submit');
+
+//Adminsidie customer routing
+Route::get('/customersopp','AdimnSideCustomerController@index');

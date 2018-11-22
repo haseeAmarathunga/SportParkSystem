@@ -21,10 +21,7 @@
 <!-- buttons -->
 
 <div>
-    <a href="messages"><button class="btn btn-success btn-lg btn-block">Forum Messages</button></a>
-    <a href="staffreg"><button class="btn btn-primary btn-lg btn-block">Register Staff</button></a>
-    <a href="#"><button class="btn btn-success btn-lg btn-block">View Staff</button></a>
-    <a href="{{url('customersopp')}}"><button class="btn btn-primary btn-lg btn-block"> Customers</button></a>
+make sheadule 
 </div>
 
 
