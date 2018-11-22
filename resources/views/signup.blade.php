@@ -2,7 +2,6 @@
 
 @section('content')
 
-<img src="img/a.jpg">
 @section('sidebar')
 @parent
 @endsection
