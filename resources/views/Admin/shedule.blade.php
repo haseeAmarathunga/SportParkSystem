@@ -28,7 +28,7 @@
   <form method="post" action= "{{url('/addschedule')}}" >
 
      {{csrf_field()}}
-    
+
       <div class="form-group">
         <label for="type">NIC:</label>
         <input type="text" class="form-control" id="type" name ="nic1" value="{{$val['nic']}}">
@@ -44,22 +44,19 @@
     <input type="text" class="form-control" id="group" name = "group1">
   </div>
 
-  <div class="form-group">
+
+<div class="form-group">
     <label for="day">Day:</label>
-    <input type="date" class="form-control" id="day" name ="day1">
-  </div>
-<!--<div class="form-group">
-    <label for="day">Day:</label>
-  <select class="form-control">
-  <option name="day" value="Sunday">Sunday</option>
-  <option name="day" value="Monday">Monday</option>
-  <option name="day" value="Tuesday">Tuesday</option>
-  <option name="day" value="Wednesday">Wednesday</option>
-  <option name="day" value="Thursday">Thursday</option>
-  <option name="day" value="Friday">Friday</option>
-  <option name="day" value="Sataday">Sataday</option>
+  <select name="day1" >
+  <option  value="Sunday">Sunday</option>
+  <option  value="Monday">Monday</option>
+  <option value="Tuesday">Tuesday</option>
+  <option  value="Wednesday">Wednesday</option>
+  <option  value="Thursday">Thursday</option>
+  <option  value="Friday">Friday</option>
+  <option  value="Sataday">Sataday</option>
 </select>
-</div> -->
+</div>
 
   <div class="form-group">
     <label for="time">Time:</label>
