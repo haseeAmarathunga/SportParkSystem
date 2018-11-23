@@ -21,29 +21,49 @@
 <!-- buttons -->
 
 <div class="container">
-<h1>shedules</h1>
+<h1>shedules of NIC --><i> {{$val['nic']}}</i></h1>
 <div class ="col-md-4 well">
 <div >  <center>Add Item</center></div>
   <br>
-  <form action="/action_page.php">
+  <form method="post" action= "{{url('/addschedule')}}" >
+
+     {{csrf_field()}}
+    
+      <div class="form-group">
+        <label for="type">NIC:</label>
+        <input type="text" class="form-control" id="type" name ="nic1" value="{{$val['nic']}}">
+      </div>
+
   <div class="form-group">
     <label for="type">Item Type:</label>
-    <input type="text" class="form-control" id="type" name ="type">
+    <input type="text" class="form-control" id="type" name ="type1">
   </div>
 
   <div class="form-group">
     <label for="group">Item Group:</label>
-    <input type="text" class="form-control" id="group" name = "group">
+    <input type="text" class="form-control" id="group" name = "group1">
   </div>
 
   <div class="form-group">
     <label for="day">Day:</label>
-    <input type="date" class="form-control" id="day" name = "day">
+    <input type="date" class="form-control" id="day" name ="day1">
   </div>
+<!--<div class="form-group">
+    <label for="day">Day:</label>
+  <select class="form-control">
+  <option name="day" value="Sunday">Sunday</option>
+  <option name="day" value="Monday">Monday</option>
+  <option name="day" value="Tuesday">Tuesday</option>
+  <option name="day" value="Wednesday">Wednesday</option>
+  <option name="day" value="Thursday">Thursday</option>
+  <option name="day" value="Friday">Friday</option>
+  <option name="day" value="Sataday">Sataday</option>
+</select>
+</div> -->
 
   <div class="form-group">
     <label for="time">Time:</label>
-    <input type="time" class="form-control" id="time" name = "time">
+    <input type="time" class="form-control" id="time" name = "time1">
   </div>
 
 

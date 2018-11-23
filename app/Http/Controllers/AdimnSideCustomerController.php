@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Customer;
-
+use App\Scheduls;
 class AdimnSideCustomerController extends Controller
 {
      public function index()     {
@@ -22,7 +22,8 @@ class AdimnSideCustomerController extends Controller
       }
 
       public function shedule($nic){
-        return view('Admin.shedule');
+        $val['nic']=$nic;
+        return view('Admin.shedule',compact('val'));
       }
 
       public function payment($nic){
@@ -32,5 +33,7 @@ class AdimnSideCustomerController extends Controller
       public function delete(){
         return view('Admin.delete');
       }
+
+
 
 }
