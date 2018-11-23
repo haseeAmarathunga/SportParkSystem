@@ -1,4 +1,4 @@
-# SportParkSystem
+﻿# SportParkSystem
 ## Client – Blue Feather Sport park 
 ### Location – No 16/1, 1st Lane , Bandaranayake Mw Katubedda, Moratuwa. 
 
@@ -19,5 +19,5 @@ Blue Feather sport park is a training center of sports, exercises and relaxation
 ##### 3. A System of  managing  time slots of each training programs  
 ##### 4. A System of handling Appointment details of players for individual trainings 
 ##### 5. A informing mechanism of canceling or changing details of classes.  
-##### 6. A system of handling Monthly payment details.  
+##### 6. A system of handling Monthly payment details  
  
