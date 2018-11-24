@@ -13,8 +13,9 @@ class addscheduleController extends Controller
      */
     public function index()
     {
-      $data1 = Schedulsr::all()->toArray();
-      return view('Admin.shedule', compact('data1'));
+    /*  $data1 = Schedulsr::all()->toArray();
+      return view('Admin.shedule', compact('data1'));*/
+
     }
 
 
@@ -47,9 +48,14 @@ class addscheduleController extends Controller
                                   ]);
                                    $student->save();
                                    $val['nic']=$request->get('nic1');
-                                   return view('Admin.shedule',compact('val'));
 
-                                //  return redirect()->route('Admin.shedule')->with('success', 'Data Added');
+                                   $data1 = Scheduls::select('nic','id','type','group','day','time')
+                                                     ->where([['day', '=', "Friday"] , ['nic' ,'=',$request->get('nic1')]])
+                                                     ->paginate(100);
+
+                                   return view('Admin.shedule',compact('val','data1'));
+
+
 
     }
 

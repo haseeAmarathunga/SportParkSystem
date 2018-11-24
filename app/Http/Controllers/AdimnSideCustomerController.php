@@ -27,7 +27,8 @@ class AdimnSideCustomerController extends Controller
 
 
         $data1 = Scheduls::select('nic','id','type','group','day','time')
-                          ->where('day', '=', "Friday")
+                          ->where([['day', '=', "Friday"] , ['nic' ,'=',$nic]])
+                          //->where('nic' ,'=',$nic)
                           ->paginate(100);
 
         return view('Admin.shedule',compact('val','data1'));
