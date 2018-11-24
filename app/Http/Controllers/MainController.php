@@ -7,6 +7,7 @@ use Validator;
 use Auth;
 use App\Message;
 use App\Customer;
+use App\Notice;
 //admin controller
 class MainController extends Controller
 {
@@ -35,9 +36,11 @@ class MainController extends Controller
             return back()->with('error','Wrong Login Details!');
         }
     }
+
     function successlogin() //if the login details are correct it go to adminMenu
     {
-        return view('adminmenu');
+        $notices=Notice::orderby('id','desc')->get();
+        return view('adminmenu')->with('notices',$notices);
     }
 
     function logout() //function for logout 
@@ -59,11 +62,6 @@ class MainController extends Controller
     //get route for staff registration personal details
     public function StaffNextReg(){
         return view('staffnextreg');
-    }
-
-    function getCustomerUsers(){
-        $customers=Customer::all();
-        return view('messageinbox')->with('customers',$customers);
     }
 
 

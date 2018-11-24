@@ -31,6 +31,22 @@
 </div>
 @if(isset(Auth::user()->username))
     @section('sidebar')
+        <div class="alert alert-danger">
+        <h3><span class="glyphicon glyphicon-envelope"></span> Latest Announcement</h3>
+        <hr>
+        
+        @if(count($notices)>0)
+            @foreach($notices as $notice)
+                <ul class="list-group">
+                    <li class="list-group-item">{{$notice->sender}} : {{$notice->created_at}}</li>
+                    <li class="list-group-item">Notice : <b>{{$notice->message}}</b></li>
+                    
+                </ul>
+                @break
+            @endforeach
+        </div>
+        @endif
+        <hr>
     @if(count($customers)>0)
         @foreach($customers as $customer)
             @if($customer->username==Auth::user()->username)
@@ -55,13 +71,15 @@
             @endif
         @endforeach
 
-    @endif
+@endif
 
-    @endsection
+@endsection
 @else
 <!-- if anyone does not loggedin redirected to home page -->
 <script>window.location="/home";</script>
 
 @endif
+
+<a href="notices"><button class="btn btn-default btn-lg">View All Notices</button></a>
 
 @endsection
