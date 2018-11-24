@@ -90,6 +90,10 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('notices'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('staffpasschange'))
         			@include('inc.sidebar')
     			@endif

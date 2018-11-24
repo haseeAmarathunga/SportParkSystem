@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Message;
 use App\Inbox;
 use App\Customer;
+use App\Notice;
 class MessagesController extends Controller
 {
     //validate details
@@ -70,9 +71,35 @@ class MessagesController extends Controller
         return redirect('messageinbox')->with('success','Messaged success!');
 
     }
+
     public function viewInbox(){
         $inbox=Inbox::all();
         return view('messageinbox')->with('inbox',$inbox);
     }
+
+
+    public function addNotice(Request $request)
+    {
+        $this->validate($request,[
+            'message'=>'required',
+            'sender'=>'required'
+        ]);
+
+        //create new message
+        $notice=new Notice;
+        $notice->sender = $request->input('sender');
+        $notice->message = $request->input('message');
+
+        //save message
+        $notice->save();
+        return redirect('adminmenu')->with('success','Noticed success!');
+
+    }
+
+    public function viewNotices(){
+        $notices=Notice::orderby('id','desc')->get();
+        return view('notices')->with('notices',$notices);
+    }
+
 
 }

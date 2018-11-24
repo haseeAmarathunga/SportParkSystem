@@ -21,6 +21,7 @@ Route::get('/loginwin','PagesController@getLoginWin');
 Route::get('/signup','PagesController@getSignup');
 Route::get('/next','PagesController@getNext');
 Route::get('/staffupdate','PagesController@getStaffUpdate');
+Route::get('/notices','MessagesController@viewNotices');
 
 
 Route::get('/staffpasschange','PagesController@getStaffPassChange');
@@ -46,6 +47,7 @@ Route::get('/viewcustomer','StaffController@getCustomerUsers');
 
 Route::POST('/messagereply','MessagesController@replyMessage');
 Route::POST('/newmessage','MessagesController@replyMessage');
+Route::POST('/addnotice','MessagesController@addNotice');
 
 
 Route::post('AdminLogin/checklogin','MainController@checklogin');

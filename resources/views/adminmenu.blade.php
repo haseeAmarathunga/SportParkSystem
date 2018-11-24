@@ -16,7 +16,7 @@
 @section('sidebar')
 <h3><span class="glyphicon glyphicon-envelope"></span> Send Special Notice</h3>
 <hr>
-{!! Form::open(['url'=>'/']) !!}
+{!! Form::open(['url'=>'/addnotice']) !!}
 <div class="form-group">
     {{Form::label('sender','Sender')}}
     <div class="input-group">
@@ -35,8 +35,23 @@
                 
 {!! Form::close() !!}
 <hr>
+<div class="alert alert-danger">
+    <h3><span class="glyphicon glyphicon-envelope"></span> Notices</h3>
+    <hr>
+        
+        @if(count($notices)>0)
+            @foreach($notices as $notice)
+                <ul class="list-group">
+                    <li class="list-group-item">{{$notice->sender}} : {{$notice->created_at}}</li>
+                    <li class="list-group-item">Notice : <b>{{$notice->message}}</b></li>
+                    <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
 
-
+                </ul>
+                <hr>
+         @endforeach
+    </div>
+    @endif
+<hr>
 @endsection
 
 <!-- buttons -->

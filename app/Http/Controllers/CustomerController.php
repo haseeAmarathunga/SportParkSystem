@@ -7,6 +7,7 @@ use Auth;
 use Validator;
 use App\User;
 use App\Customer;
+use App\Notice;
 class CustomerController extends Controller
 {
     //function for check login details
@@ -104,7 +105,8 @@ class CustomerController extends Controller
     //load all customers and we can filter that using $customer variable
     public function getCustomers(){
         $customers=Customer::all();
-        return view('customers')->with('customers',$customers);
+        $notices=Notice::orderby('id','desc')->get();
+        return view('customers')->with(compact('customers','notices'),$customers,$notices);
     }
 
     public function changePass(Request $request)
