@@ -5,5 +5,4 @@
 
     <img src="img/a.jpg">
 
-
 @endsection

@@ -71,7 +71,18 @@ Route::get('/logout','CustomerController@logout');
 
 Route::post('/signup/store','CustomerController@store');
 Route::post('/signup/finish','CustomerController@submit');
+
 Route::post('/customers/update','CustomerController@update');
 
 Route::get('/customerpasschange','CustomerController@getCustomers2');
 Route::get('/updatecustomer','CustomerController@getCustomers3');
+
+
+//Adminsidie customer routing
+Route::get('/customersopp','AdimnSideCustomerController@index');
+Route::get('/cus_profile/{nic}','AdimnSideCustomerController@profile');
+Route::get('/cus_attendence/{nic}','AdimnSideCustomerController@attendence');
+Route::get('/cus_shedule/{nic}','AdimnSideCustomerController@shedule');
+Route::get('/cus_payment/{nic}','AdimnSideCustomerController@payment');
+Route::get('/cus_delete','AdimnSideCustomerController@delete');
+

@@ -40,6 +40,7 @@
 @endsection
 
 <!-- buttons -->
+
 <div class="navbar-header">
 <a href="messages">
 <img src="img/icon/message.png" width="200" height="120"></a>
@@ -53,8 +54,9 @@
 <img src="img/icon/staff.png" width="200" height="120"></a>
 </div>
 <div class="navbar-header">
-<a href="">
+<a href="{{url('customersopp')}}">
 <img src="img/icon/customer.png" width="200" height="120"></a>
+
 </div>
 
 <hr>

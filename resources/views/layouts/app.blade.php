@@ -82,7 +82,7 @@
         			@include('inc.sidebar')
     			@endif
 
-				@if(Request::is('viewcustomer'))
+				@if(Request::is('updatecustomer'))
         			@include('inc.sidebar')
     			@endif
 
