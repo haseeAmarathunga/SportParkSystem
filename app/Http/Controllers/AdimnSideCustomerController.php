@@ -13,7 +13,10 @@ class AdimnSideCustomerController extends Controller
        }
 
       public function profile($nic){
-        return view('Admin.profile');
+        $customers = Customer::select('id','username','firstname','lastname','nic','email','address','mobile')
+                          ->where('nic' ,'=',$nic)
+                          ->paginate(100);
+        return view('Admin.profile',compact('customers'));
         //return redirect()->route('Admin.profile');
       }
 
