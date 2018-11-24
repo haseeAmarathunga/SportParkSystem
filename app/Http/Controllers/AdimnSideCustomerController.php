@@ -26,12 +26,37 @@ class AdimnSideCustomerController extends Controller
       //$data1 = Scheduls::all()->toArray();
 
 
-        $data1 = Scheduls::select('nic','id','type','group','day','time')
-                          ->where([['day', '=', "Friday"] , ['nic' ,'=',$nic]])
-                          //->where('nic' ,'=',$nic)
-                          ->paginate(100);
+                //Sunday
+                $data1 = Scheduls::select('nic','id','type','group','day','time')
+                                  ->where([['day', '=', "Sunday"] , ['nic' ,'=',$nic]])
+                                  ->paginate(100);
+               //Monday
+               $data2 = Scheduls::select('nic','id','type','group','day','time')
+                                     ->where([['day', '=', "Monday"] , ['nic' ,'=',$nic]])
+                                     ->paginate(100);
 
-        return view('Admin.shedule',compact('val','data1'));
+               //Tuesday
+               $data3 = Scheduls::select('nic','id','type','group','day','time')
+                                       ->where([['day', '=', "Tuesday"] , ['nic' ,'=',$nic]])
+                                         ->paginate(100);
+               //Wednesday
+               $data4 = Scheduls::select('nic','id','type','group','day','time')
+                                     ->where([['day', '=', "Wednesday"] , ['nic' ,'=',$nic]])
+                                     ->paginate(100);
+               //Thursday
+               $data5 = Scheduls::select('nic','id','type','group','day','time')
+                                     ->where([['day', '=', "Thursday"] , ['nic' ,'=',$nic]])
+                                     ->paginate(100);
+             //Friday
+               $data6 = Scheduls::select('nic','id','type','group','day','time')
+                                     ->where([['day', '=', "Friday"] , ['nic' ,'=',$nic]])
+                                     ->paginate(100);
+             //Sataday
+              $data7 = Scheduls::select('nic','id','type','group','day','time')
+                                   ->where([['day', '=', "Sataday"] , ['nic' ,'=',$nic]])
+                                   ->paginate(100);
+
+        return view('Admin.shedule',compact('val','data1','data2','data3','data4','data5','data6','data7'));
 
       }
 

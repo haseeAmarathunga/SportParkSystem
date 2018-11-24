@@ -113,13 +113,15 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($data2 as $row1)
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{$row1['type']}}</td>
+        <td>{{$row1['group']}}</td>
+        <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
         <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
+     @endforeach
     </tbody>
   </table>
 
@@ -136,13 +138,15 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($data3 as $row1)
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{$row1['type']}}</td>
+        <td>{{$row1['group']}}</td>
+        <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
         <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
+     @endforeach
     </tbody>
   </table>
 
@@ -159,13 +163,15 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($data4 as $row1)
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{$row1['type']}}</td>
+        <td>{{$row1['group']}}</td>
+        <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
         <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
+     @endforeach
     </tbody>
   </table>
 
@@ -182,13 +188,15 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($data5 as $row1)
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{$row1['type']}}</td>
+        <td>{{$row1['group']}}</td>
+        <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
         <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
+     @endforeach
     </tbody>
   </table>
 
@@ -205,13 +213,15 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($data6 as $row1)
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{$row1['type']}}</td>
+        <td>{{$row1['group']}}</td>
+        <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
         <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
+     @endforeach
     </tbody>
   </table>
 
@@ -228,13 +238,15 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($data7 as $row1)
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{$row1['type']}}</td>
+        <td>{{$row1['group']}}</td>
+        <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
         <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
+     @endforeach
     </tbody>
   </table>
 
