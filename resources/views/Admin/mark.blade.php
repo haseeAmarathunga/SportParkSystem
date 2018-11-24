@@ -25,7 +25,7 @@
 <div class =" well">
 <div >  <center>Add Item</center></div>
   <br>
-  <form method="post" action= "{{url('/addschedule')}}" >
+  <form method="post" action= "{{url('/Mark')}}" >
 
      {{csrf_field()}}
 
