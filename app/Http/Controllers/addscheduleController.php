@@ -77,7 +77,7 @@ class addscheduleController extends Controller
                                  $data7 = Scheduls::select('nic','id','type','group','day','time')
                                                       ->where([['day', '=', "Sataday"] , ['nic' ,'=',$request->get('nic1')]])
                                                       ->paginate(100);
-                                   return view('Admin.shedule',compact('val','data1','data2','data3','data4','data5','data6','data7'));
+        return view('Admin.shedule',compact('val','data1','data2','data3','data4','data5','data6','data7'));
 
 
 
@@ -123,8 +123,10 @@ class addscheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,$nic)
     {
-        //
+         $student = Scheduls::find($id);
+         $student->delete();
+         return redirect("/cus_shedule/$nic");
     }
 }

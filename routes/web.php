@@ -89,3 +89,4 @@ Route::get('/cus_payment/{nic}','AdimnSideCustomerController@payment');
 Route::get('/cus_delete','AdimnSideCustomerController@delete');
 
 Route::resource('/addschedule','addscheduleController');
+Route::get('/cus_delete_sch/{id}/{nic}','addscheduleController@destroy');

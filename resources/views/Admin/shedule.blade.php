@@ -19,7 +19,7 @@
 @endsection
 
 <!-- buttons -->
-
+<a href="/customersopp"><button class="btn btn-default">back to Manage Customers</button></a>
 <div class="container">
 <h1>shedules of NIC --><i> {{$val['nic']}}</i></h1>
 <div class ="col-md-4 well">
@@ -73,7 +73,7 @@
 <div class ="col-md-8 well ">
   <div >  <center> View Shedule </center></div>
 
-  <div class=" col-md-5 bg-success text-white " ><center><i><b>Sunday</b></i></center></div>
+  <div class=" col-md-5 bg-danger " ><center><i><b>Sunday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>
   <table class="table table-striped">
     <thead>
@@ -92,7 +92,7 @@
         <td>{{$row1['group']}}</td>
         <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
-        <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
+        <td><a href="{{url('/cus_delete_sch/'.$row1['id'].'/'.$row1['nic'])}}" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
      @endforeach
     </tbody>
@@ -100,7 +100,7 @@
 
 
 
-  <div class=" col-md-5 bg-success text-white " ><center><i><b>Monday</b></i></center></div>
+  <div class=" col-md-5 col-md-5 bg-danger " ><center><i><b>Monday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>
   <table class="table table-striped">
     <thead>
@@ -119,13 +119,13 @@
         <td>{{$row1['group']}}</td>
         <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
-        <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
+        <td><a href="{{url('/cus_delete_sch/'.$row1['id'].'/'.$row1['nic'])}}" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
      @endforeach
     </tbody>
   </table>
 
-  <div class=" col-md-5 bg-success text-white " ><center><i><b>Tuesday</b></i></center></div>
+  <div class=" col-md-5 col-md-5 bg-danger " ><center><i><b>Tuesday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>
   <table class="table table-striped">
     <thead>
@@ -144,13 +144,13 @@
         <td>{{$row1['group']}}</td>
         <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
-        <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
+        <td><a href="{{url('/cus_delete_sch/'.$row1['id'].'/'.$row1['nic'])}}" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
      @endforeach
     </tbody>
   </table>
 
-  <div class=" col-md-5 bg-success text-white " ><center><i><b>Wednesday</b></i></center></div>
+  <div class=" col-md-5 col-md-5 bg-danger " ><center><i><b>Wednesday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>
   <table class="table table-striped">
     <thead>
@@ -169,13 +169,13 @@
         <td>{{$row1['group']}}</td>
         <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
-        <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
+        <td><a href="{{url('/cus_delete_sch/'.$row1['id'].'/'.$row1['nic'])}}" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
      @endforeach
     </tbody>
   </table>
 
-  <div class=" col-md-5 bg-success text-white " ><center><i><b>Thursday</b></i></center></div>
+  <div class=" col-md-5 col-md-5 bg-danger " ><center><i><b>Thursday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>
   <table class="table table-striped">
     <thead>
@@ -194,13 +194,13 @@
         <td>{{$row1['group']}}</td>
         <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
-        <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
+        <td><a href="{{url('/cus_delete_sch/'.$row1['id'].'/'.$row1['nic'])}}" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
      @endforeach
     </tbody>
   </table>
 
-  <div class=" col-md-5 bg-success text-white " ><center><i><b>Friday</b></i></center></div>
+  <div class=" col-md-5 col-md-5 bg-danger " ><center><i><b>Friday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>
   <table class="table table-striped">
     <thead>
@@ -219,13 +219,13 @@
         <td>{{$row1['group']}}</td>
         <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
-        <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
+        <td><a href="{{url('/cus_delete_sch/'.$row1['id'].'/'.$row1['nic'])}}" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
      @endforeach
     </tbody>
   </table>
 
-  <div class=" col-md-5 bg-success text-white " ><center><i><b>Sataday</b></i></center></div>
+  <div class=" col-md-5 col-md-5 bg-danger  " ><center><i><b>Sataday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>
   <table class="table table-striped">
     <thead>
@@ -244,7 +244,7 @@
         <td>{{$row1['group']}}</td>
         <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
-        <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
+        <td><a href="{{url('/cus_delete_sch/'.$row1['id'].'/'.$row1['nic'])}}"class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
      @endforeach
     </tbody>
