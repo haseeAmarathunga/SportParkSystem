@@ -21,9 +21,27 @@
 <!-- buttons -->
 
 <div>
-<h1>Attendence</h1>
-<a href="/customersopp"><button class="btn btn-default">back to Manage Customers</button></a>
+
+
+
 <div class="container">
+  <nav class="navbar ">
+  <div class="container">
+    
+    <ul class="nav navbar-nav">
+
+      <li><a href="/customersopp"><button class="btn btn-default">back to Manage Customers</button></a></li>
+
+    </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="form-group">
+        <input type="date" class="form-control" placeholder="Add Date">
+      </div>
+      <button type="submit" class="btn btn-default">Search Attendence</button>
+    </form>
+  </div>
+</nav>
+
 <h1>shedules of NIC --><i> {{$val['nic']}}</i></h1>
 <div class ="col-md-1"></div>
 <div class ="col-md-10 well ">

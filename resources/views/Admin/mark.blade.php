@@ -21,7 +21,7 @@
 <!-- buttons -->
 
 <div>
-<h1>Marks</h1>
+<h1> Mark Attendence</h1>
 <div class =" well">
 <div >  <center>Add Item</center></div>
   <br>
