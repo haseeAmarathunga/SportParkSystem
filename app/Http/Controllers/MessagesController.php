@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Message;
 use App\Inbox;
+use App\Customer;
 class MessagesController extends Controller
 {
     //validate details
@@ -54,7 +55,8 @@ class MessagesController extends Controller
     public function replyMessage(Request $request)
     {
         $this->validate($request,[
-            'message'=>'required'
+            'message'=>'required',
+            'reciever'=>'required'
         ]);
 
         //create new message
@@ -65,11 +67,12 @@ class MessagesController extends Controller
 
         //save message
         $inbox->save();
-        return redirect('messageinbox')->with('success','Reply success!');
+        return redirect('messageinbox')->with('success','Messaged success!');
 
     }
     public function viewInbox(){
         $inbox=Inbox::all();
         return view('messageinbox')->with('inbox',$inbox);
     }
+
 }

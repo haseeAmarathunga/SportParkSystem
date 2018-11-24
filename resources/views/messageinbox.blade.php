@@ -53,6 +53,32 @@
 <div>
 <a href="/staffs"><button class="btn btn-default">back</button></a></div><hr>
 <h3><span class="glyphicon glyphicon-envelope"></span> Send Messages</h3>
+<hr>
+{!! Form::open(['url'=>'/newmessage']) !!}
+<div class="form-group">
+    {{Form::label('sender','Sender')}}
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+    <input type="text" class="form-control" name="sender" id="sender" placeholder="sender"readonly value={{$inb->reciever}}>
+</div></div>
+<div class="form-group">
+   {{Form::label('reciever','Reciever')}}
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+    <input type="text" class="form-control" name="reciever" id="reciever" placeholder="Reciever">
+</div></div>
+
+<div class="form-group">
+   {{Form::label('message','Message')}}
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+    <input type="textarea" class="form-control" name="message" id="message" placeholder="Enter Message">
+</div></div>
+
+<button class="btn btn-success"type="submit">Send <span class="glyphicon glyphicon-send"></span></button>
+                
+{!! Form::close() !!}
+
 
 
 @endsection

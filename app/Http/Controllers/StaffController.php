@@ -7,6 +7,7 @@ use Auth;
 use Validator;
 use App\Staff;
 use App\User;
+use App\Customer;
 class StaffController extends Controller
 {
     //validate and check the login details
@@ -181,6 +182,11 @@ class StaffController extends Controller
     public function getStaff3(){
         $staffs=Staff::all();
         return view('staffpasschange')->with('staffs',$staffs);
+    }
+
+    function getCustomerUsers(){
+        $customers=Customer::all();
+        return view('viewcustomer')->with('customers',$customers);
     }
 
 

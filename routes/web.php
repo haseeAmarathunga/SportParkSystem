@@ -41,7 +41,12 @@ Route::Auth();
 Route::post('/contact/submit','MessagesController@submit');
 Route::get('/messageinbox','MessagesController@viewInbox');//staff message
 
+Route::get('/viewcustomer','StaffController@getCustomerUsers');
+
+
 Route::POST('/messagereply','MessagesController@replyMessage');
+Route::POST('/newmessage','MessagesController@replyMessage');
+
 
 Route::post('AdminLogin/checklogin','MainController@checklogin');
 Route::get('/adminmenu','MainController@successlogin');
@@ -53,6 +58,7 @@ Route::get('StaffLogin/logout','StaffController@logout');
 Route::post('/staffreg/store','StaffController@store');
 Route::post('/staffs/update','StaffController@update');
 Route::post('/staffs/passchange','StaffController@changePass');
+Route::post('/customers/passchange','CustomerController@changePass');
 
 
 Route::get('/staffs','StaffController@getStaff');
@@ -65,3 +71,7 @@ Route::get('/logout','CustomerController@logout');
 
 Route::post('/signup/store','CustomerController@store');
 Route::post('/signup/finish','CustomerController@submit');
+Route::post('/customers/update','CustomerController@update');
+
+Route::get('/customerpasschange','CustomerController@getCustomers2');
+Route::get('/updatecustomer','CustomerController@getCustomers3');

@@ -51,5 +51,6 @@
 @endif
 
 <a href="/messageinbox"><button class="btn btn-success">Messages</button></a>
+<a href="/viewcustomer"><button class="btn btn-warning">Customers</button></a>
 
 @endsection

@@ -78,6 +78,14 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('updatecustomer'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('viewcustomer'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('messageinbox'))
         			@include('inc.sidebar')
     			@endif
