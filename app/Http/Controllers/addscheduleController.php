@@ -13,8 +13,10 @@ class addscheduleController extends Controller
      */
     public function index()
     {
-        //
+      $data1 = Schedulsr::all()->toArray();
+      return view('Admin.shedule', compact('data1'));
     }
+
 
     /**
      * Show the form for creating a new resource.

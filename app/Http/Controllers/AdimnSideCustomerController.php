@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+//use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Customer;
 use App\Scheduls;
@@ -23,7 +23,15 @@ class AdimnSideCustomerController extends Controller
 
       public function shedule($nic){
         $val['nic']=$nic;
-        return view('Admin.shedule',compact('val'));
+      //$data1 = Scheduls::all()->toArray();
+
+
+        $data1 = Scheduls::select('nic','id','type','group','day','time')
+                          ->where('day', '=', "Friday")
+                          ->paginate(100);
+
+        return view('Admin.shedule',compact('val','data1'));
+
       }
 
       public function payment($nic){

@@ -86,15 +86,19 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($data1 as $row1)
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{$row1['type']}}</td>
+        <td>{{$row1['group']}}</td>
+        <td>{{$row1['time']}}</td>
         <td><a href="" class="btn btn-primary btn-block btn-info">Edit</a></td>
         <td><a href="" class="btn btn-primary btn-block btn-danger">Remove</a></td>
       </tr>
+     @endforeach
     </tbody>
   </table>
+
+
 
   <div class=" col-md-5 bg-success text-white " ><center><i><b>Monday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>
