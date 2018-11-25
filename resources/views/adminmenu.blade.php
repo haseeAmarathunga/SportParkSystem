@@ -65,7 +65,7 @@
 <img src="img/icon/regstaff.png" width="200" height="120"></a>
 </div>
 <div class="navbar-header">
-<a href="">
+<a href="viewadminstaff">
 <img src="img/icon/staff.png" width="200" height="120"></a>
 </div>
 <div class="navbar-header">

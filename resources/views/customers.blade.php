@@ -80,6 +80,7 @@
 
 @endif
 
-<a href="notices"><button class="btn btn-default btn-lg">View All Notices</button></a>
+<a href="notices"><button class="btn btn-primary btn-lg btn-block">View All Notices</button></a>
+<a href="plans"><button class="btn btn-success btn-lg btn-block">Choose a Package</button></a>
 
 @endsection

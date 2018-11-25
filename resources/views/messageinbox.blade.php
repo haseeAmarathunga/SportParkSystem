@@ -54,7 +54,7 @@
 <a href="/staffs"><button class="btn btn-default">back</button></a></div><hr>
 <h3><span class="glyphicon glyphicon-envelope"></span> Send Messages</h3>
 <hr>
-{!! Form::open(['url'=>'/newmessage']) !!}
+{!! Form::open(['url'=>'/newmessagestaff']) !!}
 <div class="form-group">
     {{Form::label('sender','Sender')}}
     <div class="input-group">

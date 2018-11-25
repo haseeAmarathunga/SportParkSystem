@@ -8,6 +8,7 @@ use Validator;
 use App\User;
 use App\Customer;
 use App\Notice;
+use App\Package;
 class CustomerController extends Controller
 {
     //function for check login details
@@ -48,7 +49,7 @@ class CustomerController extends Controller
     }
 
     //store the first step login details in user table
-    public function store()
+    public function store(Request $request)
     {
         $this->validate(request(),[
             'username'=>'required',
@@ -58,16 +59,16 @@ class CustomerController extends Controller
 
         ]);
 
-        $pass1=request('password');
-        $pass2=request('password_confirmation');
-
-        if($pass1==$pass2){
+        $username=$request->input('username');
+        $user=User::where('username','=',$username)->get();
+    
+        if(count($user)==0){
             $user=User::create(request(['username','email','password']));
             auth()->login($user);
             return redirect()->to('/next');
         }
         else{
-            return redirect()->to('/signup');
+            return redirect()->to('/signup')->with('success','This username is already taken!');
         }
 
     }
@@ -94,12 +95,17 @@ class CustomerController extends Controller
         $customer->address = $request->input('address');
         $customer->mobile = $request->input('mobile');
       
+        $username=$customer->username;
+        $user=User::where('username','=',$username)->get();
 
         //save that customer
-        $customer->save();
-
-        //redirect to the home page
-        return redirect('/home')->with('success','Register successfull!');
+        if(count($user==1)){
+            $customer->save();
+            //redirect to the home page
+            return redirect('/home')->with('success','Registered successfull!');
+        }else{
+            return redirect('/next')->with('success','Invalid Username!');
+        }
     }
 
     //load all customers and we can filter that using $customer variable
@@ -175,5 +181,35 @@ class CustomerController extends Controller
     public function getCustomers3(){
         $customers=Customer::all();
         return view('updatecustomer')->with('customers',$customers);
+    }
+
+    public function getPackage(Request $request)
+    {
+        $this->validate($request,[
+            'username'=>'required',
+            'package'=>'required'
+        ]);
+
+        
+        $pack=array('Standard','Popular','Golden','Proffessional');
+        //create new package
+        $package=new Package;
+        $package->username = $request->input('username');
+        $package->package = $pack[$request->input('package')];
+        $packname=$package->package;
+        $username= $package->username;
+        $user=Package::where('username','=',$username)->get();
+
+
+        //save package
+        if(count($user)>0){
+            $sql="update packages SET package='$packname' WHERE username='$username'";
+            \DB::update($sql);
+            return redirect('plans')->with('success',"Your package updated as $packname!");
+        }
+        else{
+            $package->save();
+            return redirect('customers')->with('success',"$packname Package Added!");
+        }
     }
 }

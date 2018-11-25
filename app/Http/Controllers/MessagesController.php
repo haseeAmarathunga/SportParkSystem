@@ -31,7 +31,7 @@ class MessagesController extends Controller
 
     //get saved messages from database message table
     public function getMessages(){
-        $messages=Message::all();
+        $messages=Message::orderby('id','desc')->get();
         return view('messages')->with('messages',$messages);
     }
 
@@ -72,8 +72,46 @@ class MessagesController extends Controller
 
     }
 
+    public function NewMessageAdmin(Request $request)
+    {
+        $this->validate($request,[
+            'message'=>'required',
+            'reciever'=>'required'
+        ]);
+
+        //create new message
+        $inbox=new Inbox;
+        $inbox->sender = $request->input('sender');
+        $inbox->reciever = $request->input('reciever');
+        $inbox->message = $request->input('message');
+
+        //save message
+        $inbox->save();
+        return redirect('viewadminstaff')->with('success','Messaged success!');
+
+    }
+
+    public function NewMessageStaff(Request $request)
+    {
+        $this->validate($request,[
+            'message'=>'required',
+            'reciever'=>'required'
+        ]);
+
+        //create new message
+        $inbox=new Inbox;
+        $inbox->sender = $request->input('sender');
+        $inbox->reciever = $request->input('reciever');
+        $inbox->message = $request->input('message');
+
+        //save message
+        $inbox->save();
+        return redirect('messageinbox')->with('success','Messaged success!');
+
+    }
+
     public function viewInbox(){
-        $inbox=Inbox::all();
+        $inbox=Inbox::orderby('id','desc')->get();
         return view('messageinbox')->with('inbox',$inbox);
     }
 

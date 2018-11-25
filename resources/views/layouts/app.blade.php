@@ -70,6 +70,14 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('viewcustomer'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('viewadminstaff'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('staffs'))
         			@include('inc.sidebar')
     			@endif

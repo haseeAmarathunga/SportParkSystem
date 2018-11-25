@@ -24,12 +24,14 @@ Route::get('/staffupdate','PagesController@getStaffUpdate');
 Route::get('/notices','MessagesController@viewNotices');
 
 
+
 Route::get('/staffpasschange','PagesController@getStaffPassChange');
 Route::get('/messageinbox','PagesController@getMessageInbox');
 
 Route::get('/AdminLogin','PagesController@getAdminLogin');
 Route::get('/StaffLogin','PagesController@getStaffLogin');
 Route::get('/customers','PagesController@getCustomers');
+Route::get('/viewadminstaff','StaffController@getStaffAdmin');
 
 Route::get('/messages','MainController@getMessages');
 Route::get('/staffreg','MainController@StaffReg');
@@ -46,7 +48,8 @@ Route::get('/viewcustomer','StaffController@getCustomerUsers');
 
 
 Route::POST('/messagereply','MessagesController@replyMessage');
-Route::POST('/newmessage','MessagesController@replyMessage');
+Route::POST('/newmessageadmin','MessagesController@NewMessageadmin');
+Route::POST('/newmessagestaff','MessagesController@NewMessagestaff');
 Route::POST('/addnotice','MessagesController@addNotice');
 
 
@@ -78,7 +81,7 @@ Route::post('/customers/update','CustomerController@update');
 
 Route::get('/customerpasschange','CustomerController@getCustomers2');
 Route::get('/updatecustomer','CustomerController@getCustomers3');
-
+Route::post('/package','CustomerController@getPackage');
 
 //Adminsidie customer routing
 Route::get('/customersopp','AdimnSideCustomerController@index');

@@ -50,7 +50,7 @@
 <script>window.location="/StaffLogin";</script>
 @endif
 
-<a href="/messageinbox"><button class="btn btn-success">Messages</button></a>
-<a href="/viewcustomer"><button class="btn btn-warning">Customers</button></a>
+<a href="/messageinbox"><button class="btn btn-primary btn-lg btn-block">Messages</button></a>
+<a href="/viewcustomer"><button class="btn btn-warning btn-lg btn-block">Customers Profile</button></a>
 
 @endsection

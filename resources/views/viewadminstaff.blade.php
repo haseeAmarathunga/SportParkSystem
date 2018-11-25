@@ -11,7 +11,7 @@
 @endif
 
 <div>
-<a href="/staffs"><button class="btn btn-default">back</button></a></div><hr>
+<a href="/adminmenu"><button class="btn btn-default">back</button></a></div><hr>
 
 @section('sidebar')
 <h3><span class="glyphicon glyphicon-envelope"></span> Send Messages</h3>
@@ -46,6 +46,7 @@
 <table class="table table-inverse">
 <tr>
     <th>Username</th>
+    <th>Position</th>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Email</th>
@@ -53,16 +54,17 @@
     <th>Address</th>
     <th></th>
 </tr>
-@if(count($customers)>0)
+@if(count($staffs)>0)
     
-    @foreach($customers as $customer)
+    @foreach($staffs as $staff)
     <tr>
-        <td>{{$customer->username}}</td>
-        <td>{{$customer->firstname}}</td> 
-        <td>{{$customer->lastname}}</td> 
-        <td>{{$customer->email}}</td>
-        <td>{{$customer->mobile}}</td> 
-        <td>{{$customer->address}}</td>  
+        <td>{{$staff->username}}</td>
+        <td>{{$staff->position}}</td>
+        <td>{{$staff->firstname}}</td> 
+        <td>{{$staff->lastname}}</td> 
+        <td>{{$staff->email}}</td>
+        <td>{{$staff->mobile}}</td> 
+        <td>{{$staff->address}}</td>  
         <td><a href=""><span class="glyphicon glyphicon-envelope"></span></a></td>   
     </tr> 
     @endforeach

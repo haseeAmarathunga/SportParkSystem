@@ -71,7 +71,5 @@ class PagesController extends Controller
     public function getMessageInbox(){
         return view('messageinbox');
     }
-
-
     
 }
