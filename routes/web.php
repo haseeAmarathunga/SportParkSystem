@@ -56,6 +56,8 @@ Route::POST('/addnotice','MessagesController@addNotice');
 Route::post('AdminLogin/checklogin','MainController@checklogin');
 Route::get('/adminmenu','MainController@successlogin');
 Route::get('/AdminLogin/logout','MainController@logout');
+Route::get('/groupallocate','MainController@allocateGroup');
+Route::post('/allocatetrainer','MainController@AddTrainer');
 
 Route::post('StaffLogin/checklogin','StaffController@checklogin');
 Route::get('/staffs','StaffController@successlogin');

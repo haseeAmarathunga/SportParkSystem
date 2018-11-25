@@ -143,7 +143,7 @@ class CustomerController extends Controller
             return redirect()->to('/customers');
         }
         else{
-            return redirect()->to('/customerpasschange')->with('error','Invalid old password!');;
+            return redirect()->to('/customerpasschange')->with('error','Invalid old password!');
         }
     }
 

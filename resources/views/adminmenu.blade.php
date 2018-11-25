@@ -71,7 +71,10 @@
 <div class="navbar-header">
 <a href="{{url('customersopp')}}">
 <img src="img/icon/customer.png" width="200" height="120"></a>
-
+</div>
+<div class="navbar-header">
+<a href="{{url('groupallocate')}}">
+<img src="img/icon/group.png" width="200" height="121"></a>
 </div>
 
 <hr>

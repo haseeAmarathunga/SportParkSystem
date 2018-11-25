@@ -78,6 +78,10 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('groupallocate'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('staffs'))
         			@include('inc.sidebar')
     			@endif
