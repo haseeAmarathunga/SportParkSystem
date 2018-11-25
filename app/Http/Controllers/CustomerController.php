@@ -112,7 +112,9 @@ class CustomerController extends Controller
     public function getCustomers(){
         $customers=Customer::all();
         $notices=Notice::orderby('id','desc')->get();
-        return view('customers')->with(compact('customers','notices'),$customers,$notices);
+        $packages=Package::all();
+        return view('customers')->with(compact('customers','notices'), $customers,$notices)
+        ->with('packages',$packages);
     }
 
     public function changePass(Request $request)
@@ -212,4 +214,5 @@ class CustomerController extends Controller
             return redirect('customers')->with('success',"$packname Package Added!");
         }
     }
+
 }

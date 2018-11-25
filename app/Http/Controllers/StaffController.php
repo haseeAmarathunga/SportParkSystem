@@ -8,6 +8,7 @@ use Validator;
 use App\Staff;
 use App\User;
 use App\Customer;
+use App\Package;
 class StaffController extends Controller
 {
     //validate and check the login details
@@ -189,7 +190,8 @@ class StaffController extends Controller
 
     function getCustomerUsers(){
         $customers=Customer::all();
-        return view('viewcustomer')->with('customers',$customers);
+        $packages=Package::all();
+        return view('viewcustomer')->with(compact('customers','packages'),$customers,$packages);
     }
 
     function getStaffAdmin()

@@ -47,10 +47,11 @@
         </div>
         @endif
         <hr>
+    <div class="alert alert-info">
     @if(count($customers)>0)
         @foreach($customers as $customer)
             @if($customer->username==Auth::user()->username)
-            <div class="alert alert-info"><h3>
+            <h3>
             <a href="/customers"><span class="glyphicon glyphicon-user"></span> My Profile</h3></a>
             <hr>
             <h4>Bio details : </h4><br/>
@@ -67,11 +68,19 @@
                     <hr>
                     <a href="/customerpasschange"><b>Change Password <span class="glyphicon glyphicon-lock"></span></b></a></li>
                    
-                </ul></div>
+                </ul>
             @endif
         @endforeach
-
-@endif
+    @endif
+    <hr>
+    @if(count($packages)>0)
+        @foreach($packages as $package)
+            @if($package->username==Auth::user()->username)
+            <h4><span class="glyphicon glyphicon-cart"></span> My Package : <b>{{$package->package}}</b></h4></a>            
+            @endif
+        @endforeach
+    @endif
+</div>
 
 @endsection
 @else
@@ -81,6 +90,6 @@
 @endif
 
 <a href="notices"><button class="btn btn-primary btn-lg btn-block">View All Notices</button></a>
-<a href="plans"><button class="btn btn-success btn-lg btn-block">Choose a Package</button></a>
+<a href="plans"><button class="btn btn-success btn-lg btn-block">Add/Edit Package</button></a>
 
 @endsection

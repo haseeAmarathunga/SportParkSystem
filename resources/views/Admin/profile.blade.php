@@ -33,8 +33,6 @@
                 <li class="list-group-item">
 
                 <hr>
-
-
             </ul>
 
     @endforeach

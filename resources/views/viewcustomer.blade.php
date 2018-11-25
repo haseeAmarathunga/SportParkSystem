@@ -51,7 +51,7 @@
     <th>Email</th>
     <th>Mobile</th>
     <th>Address</th>
-    <th></th>
+    <th>Package</th>
 </tr>
 @if(count($customers)>0)
     
@@ -63,7 +63,13 @@
         <td>{{$customer->email}}</td>
         <td>{{$customer->mobile}}</td> 
         <td>{{$customer->address}}</td>  
-        <td><a href=""><span class="glyphicon glyphicon-envelope"></span></a></td>   
+        <td><b>
+            @foreach($packages as $package)
+                @if($package->username==$customer->username)
+                    {{$package->package}}
+                @endif
+            @endforeach
+        </b></td>   
     </tr> 
     @endforeach
     
