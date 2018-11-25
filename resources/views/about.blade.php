@@ -7,5 +7,5 @@
 
 
 <!-- //contact -->
-
+<img src="img/map.png">
 @endsection

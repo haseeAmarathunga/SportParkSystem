@@ -4,30 +4,23 @@
 @section('content')
 
 <!-- check if admin loggedin -->
+<a href="/customersopp"><button class="btn btn-default">back to manage customer</button></a>
+<hr>
 @if(isset(Auth::user()->username))
-    <div class="alert alert-success success-block">
-        <strong>Welcome Admin</strong>
-        <br/>
-        <a href="{{url('AdminLogin/logout')}}">Logout</a>
-    </div>
 @else
     <script>window.location="/AdminLogin";</script>
 @endif
 @section('sidebar')
-<div class="well">
-</div>
+
 @endsection
 
 <!-- buttons -->
 
 <div>
-<h1>profile</h1>
 
 @if(count($customers)>0)
     @foreach($customers as $customer)
-
-        <div class="alert alert-info"><h3><center>
-        <a href="/customers"><span class="glyphicon glyphicon-user"></span> View Profile</h3></a>
+      <h3><span class="glyphicon glyphicon-user"></span> View Profile</h3>
         <hr>
         <h4>Bio details : </h4><br/>
             <ul class="list-group">
@@ -43,8 +36,6 @@
 
 
             </ul>
-          </center>
-          </div>
 
     @endforeach
 

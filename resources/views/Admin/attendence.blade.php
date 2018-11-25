@@ -5,14 +5,11 @@
 
 <!-- check if admin loggedin -->
 @if(isset(Auth::user()->username))
-    <div class="alert alert-success success-block">
-        <strong>Welcome Admin</strong>
-        <br/>
-        <a href="{{url('AdminLogin/logout')}}">Logout</a>
-    </div>
 @else
     <script>window.location="/AdminLogin";</script>
 @endif
+<a href="/customersopp"><button class="btn btn-default">back to Manage Customers</button></a>
+<hr>
 @section('sidebar')
 <div class="well">
 </div>
@@ -25,24 +22,23 @@
 
 
 <div class="container">
-  <nav class="navbar ">
-  <div class="container">
-    
+  <nav class="navbar ">    
     <ul class="nav navbar-nav">
 
-      <li><a href="/customersopp"><button class="btn btn-default">back to Manage Customers</button></a></li>
-
+     
     </ul>
+    <div class="col-sm-4"></div>
     <form class="navbar-form navbar-left" action="/action_page.php">
       <div class="form-group">
         <input type="date" class="form-control" placeholder="Add Date">
       </div>
-      <button type="submit" class="btn btn-default">Search Attendence</button>
+      <button type="submit" class="btn btn-success">Search Attendence</button>
     </form>
-  </div>
+  
 </nav>
 
-<h1>shedules of NIC --><i> {{$val['nic']}}</i></h1>
+
+<center><h3>Shedules of NIC --><i> {{$val['nic']}}</i></h3></center>
 <div class ="col-md-1"></div>
 <div class ="col-md-10 well ">
   <div >  <center> View Shedule </center></div>

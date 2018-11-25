@@ -2,28 +2,24 @@
 @extends('layouts.app')
 
 @section('content')
-
+<a href="/customersopp"><button class="btn btn-default">back to Manage Customers</button></a>
 <!-- check if admin loggedin -->
+<hr>
 @if(isset(Auth::user()->username))
-    <div class="alert alert-success success-block">
-        <strong>Welcome Admin</strong>
-        <br/>
-        <a href="{{url('AdminLogin/logout')}}">Logout</a>
-    </div>
+
 @else
     <script>window.location="/AdminLogin";</script>
 @endif
 @section('sidebar')
-<div class="well">
-</div>
+
 @endsection
 
 <!-- buttons -->
-<a href="/customersopp"><button class="btn btn-default">back to Manage Customers</button></a>
+
 <div class="container">
-<h1>shedules of NIC --><i> {{$val['nic']}}</i></h1>
+<b><h3>Shedules of NIC --><i> {{$val['nic']}}</i></h3><b><hr>
 <div class ="col-md-4 well">
-<div >  <center>Add Item</center></div>
+<div > <h3> <b><center>Add Item</center><b></h3></div>
   <br>
   <form method="post" action= "{{url('/addschedule')}}" >
 
@@ -47,7 +43,7 @@
 
 <div class="form-group">
     <label for="day">Day:</label>
-  <select name="day1" >
+  <select name="day1" class="form-control">
   <option  value="Sunday">Sunday</option>
   <option  value="Monday">Monday</option>
   <option value="Tuesday">Tuesday</option>
@@ -67,11 +63,11 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-  <img src="/img/admin.png" width="50" height="50">
+
 
 </div>
 <div class ="col-md-8 well ">
-  <div >  <center> View Shedule </center></div>
+  <div >  <h3><b><center> View Shedule </center></b></h3></div><hr>
 
   <div class=" col-md-5 bg-danger " ><center><i><b>Sunday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>
