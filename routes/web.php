@@ -101,3 +101,5 @@ Route::get('/cus_mark_sch/{row1}/{row2}/{row3}/{row4}/{row5}/{row6}','MarkContro
 Route::resource('/Mark','MarkController');
 //admin payment
 Route::resource('/pay','PaymentController');
+//print Bill
+Route::get('/print_bill/{id}/{nic}/{type}/{pfm}/{date}/{fee}','PaymentController@pdf');
