@@ -52,6 +52,7 @@ Route::POST('/newmessageadmin','MessagesController@NewMessageadmin');
 Route::POST('/newmessagestaff','MessagesController@NewMessagestaff');
 Route::POST('/addnotice','MessagesController@addNotice');
 
+Route::POST('/deletenotice','MessagesController@deleteNotice');
 
 Route::post('AdminLogin/checklogin','MainController@checklogin');
 Route::get('/adminmenu','MainController@successlogin');

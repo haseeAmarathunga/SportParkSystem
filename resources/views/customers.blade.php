@@ -44,8 +44,8 @@
                 </ul>
                 @break
             @endforeach
-        </div>
         @endif
+        </div>
         <hr>
     <div class="alert alert-info">
     @if(count($customers)>0)
@@ -76,7 +76,8 @@
     @if(count($packages)>0)
         @foreach($packages as $package)
             @if($package->username==Auth::user()->username)
-            <h4><span class="glyphicon glyphicon-cart"></span> My Package : <b>{{$package->package}}</b></h4></a>            
+            <h4><span class="glyphicon glyphicon-cart"></span> My Package : 
+            <b>{{$package->package}} {{$package->groups}}</b></h4></a>            
             @endif
         @endforeach
     @endif

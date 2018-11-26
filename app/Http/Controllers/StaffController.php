@@ -9,6 +9,7 @@ use App\Staff;
 use App\User;
 use App\Customer;
 use App\Package;
+use App\Notice;
 class StaffController extends Controller
 {
     //validate and check the login details
@@ -175,7 +176,8 @@ class StaffController extends Controller
 
     public function getStaff(){
         $staffs=Staff::all();
-        return view('staffs')->with('staffs',$staffs);
+        $notices=Notice::orderby('id','desc')->get();
+        return view('staffs')->with(compact('staffs','notices'),$staffs,$notices);
     }
 
     public function getStaff2(){

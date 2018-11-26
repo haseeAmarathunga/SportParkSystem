@@ -16,6 +16,13 @@
 		{{Form::select('package',['Standard','Popular','Golden','Proffessional'],'Standard',
 		['class'=>'form-control','id'=>'package'])}}
 		</div></div>
+		<div class="form-group">
+			{{Form::label('groupid','Group')}}
+			<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-group"></i></span>
+			{{Form::select('groups',['Badminton','Weight Lifting','Sports','Exercices'],'Badminton',
+			['class'=>'form-control','id'=>'package'])}}
+		</div></div>
 
 		<div class="buy-button">
 			<button type="submit" class="btn btn-success">Buy Now</button>

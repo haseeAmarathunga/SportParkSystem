@@ -139,5 +139,17 @@ class MessagesController extends Controller
         return view('notices')->with('notices',$notices);
     }
 
+    function deleteNotice(Request $request)
+    {
+        $this->validate($request,[
+            'message'=>'required'
+        ]);
+        $input=$request->only('message');
+        $msg=$input['message'];
+        $sql="DELETE FROM notices where message='$msg'";
+        \DB::delete($sql);
+        return redirect()->to('/adminmenu');
+        
+    }
 
 }

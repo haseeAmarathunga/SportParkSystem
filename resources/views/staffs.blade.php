@@ -52,5 +52,21 @@
 
 <a href="/messageinbox"><button class="btn btn-primary btn-lg btn-block">Messages</button></a>
 <a href="/viewcustomer"><button class="btn btn-warning btn-lg btn-block">Customers Profile</button></a>
-
+<hr>
+<div class="alert alert-default">
+        <h3><span class="glyphicon glyphicon-envelope"></span> Latest Announcement</h3>
+        <hr>
+        
+        @if(count($notices)>0)
+            @foreach($notices as $notice)
+                <ul class="list-group">
+                    <li class="list-group-item">{{$notice->sender}} : {{$notice->created_at}}</li>
+                    <li class="list-group-item">Notice : <b>{{$notice->message}}</b></li>
+                    
+                </ul>
+                @break
+            @endforeach
+        @endif
+        </div>
+        <hr>
 @endsection

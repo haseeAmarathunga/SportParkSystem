@@ -44,13 +44,17 @@
                 <ul class="list-group">
                     <li class="list-group-item">{{$notice->sender}} : {{$notice->created_at}}</li>
                     <li class="list-group-item">Notice : <b>{{$notice->message}}</b></li>
-                    <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
-
+                    {!! Form::open(['url'=>'deletenotice']) !!}
+                    <input type="text" readonly name="message" value="{{$notice->message}}">
+                    <button type="submit" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash"></span></button>
+                    {!! Form::close() !!}
                 </ul>
                 <hr>
-         @endforeach
-    </div>
-    @endif
+            @endforeach
+        @endif
+</div>
+    
 <hr>
 @endsection
 

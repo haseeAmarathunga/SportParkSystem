@@ -17,6 +17,7 @@ class CreatePackagesTable extends Migration
             $table->increments('id');
             $table->string('username');
             $table->string('package');
+            $table->string('groups');
             $table->timestamps();
         });
     }

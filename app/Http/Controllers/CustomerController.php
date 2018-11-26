@@ -189,29 +189,34 @@ class CustomerController extends Controller
     {
         $this->validate($request,[
             'username'=>'required',
-            'package'=>'required'
+            'package'=>'required',
+            'groups'=>'required'
         ]);
 
         
         $pack=array('Standard','Popular','Golden','Proffessional');
+        $gro=array('Badminton','Weight Lifting','Sports','Exercices');
         //create new package
         $package=new Package;
         $package->username = $request->input('username');
         $package->package = $pack[$request->input('package')];
+        $package->groups =$gro[$request->input('groups')];
+
         $packname=$package->package;
+        $group=$package->groups;
         $username= $package->username;
         $user=Package::where('username','=',$username)->get();
 
 
         //save package
         if(count($user)>0){
-            $sql="update packages SET package='$packname' WHERE username='$username'";
+            $sql="update packages SET package='$packname', groups='$group' WHERE username='$username'";
             \DB::update($sql);
-            return redirect('plans')->with('success',"Your package updated as $packname!");
+            return redirect('plans')->with('success',"Your package updated as $packname $group!");
         }
         else{
             $package->save();
-            return redirect('customers')->with('success',"$packname Package Added!");
+            return redirect('customers')->with('success',"$packname $group Package Added!");
         }
     }
 
