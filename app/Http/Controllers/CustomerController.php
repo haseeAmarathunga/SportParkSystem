@@ -163,7 +163,7 @@ class CustomerController extends Controller
             'address'=>'required',
             'mobile'=>'required',
         ]);
-        
+        //get that field from form
         $input=$request->only('username','firstname','lastname','nic','email','address','mobile');
 
         $username=$input['username'];
@@ -174,6 +174,7 @@ class CustomerController extends Controller
         $address=$input['address'];
         $mobile=$input['mobile'];
         
+        //sql query for update
         $sql="update customers SET firstname='$firstname',lastname='$lastname',nic='$nic',
         email='$email',address='$address',mobile='$mobile' WHERE username='$username'";
         \DB::update($sql);

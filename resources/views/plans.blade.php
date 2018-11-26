@@ -7,6 +7,7 @@
 @else
     <script>window.location="/home";</script>
 @endif
+<!-- form for choose pricing plans -->
 {!! Form::open(['url'=>'package']) !!}
 		<div class="form-group">
 		<h3>{{Form::label('select','Select Your Package')}}</h3><hr>

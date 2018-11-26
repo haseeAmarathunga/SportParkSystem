@@ -66,7 +66,7 @@
         <td><b>
             @foreach($packages as $package)
                 @if($package->username==$customer->username)
-                    {{$package->package}}
+                    {{$package->package}} {{$package->groups}}
                 @endif
             @endforeach
         </b></td>   

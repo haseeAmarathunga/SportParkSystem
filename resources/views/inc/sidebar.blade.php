@@ -2,7 +2,7 @@
 @section('sidebar')
     <div class="well">
  
-        
+    <!-- contact details -->
      <h3>Contact Info</h3>
 		<p>    Blue Feather sport park is a training center of sports, exercises and relaxation therapies which are 
 		conducted as individual and group training classes daily such as Badmintons, Karate, Zumba!</p>

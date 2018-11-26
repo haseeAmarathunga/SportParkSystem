@@ -18,6 +18,7 @@
 @if(isset(Auth::user()->username))
     <h3><span class="glyphicon glyphicon-envelope"></span> Announcements!</h3>
     <hr>   
+        <!-- get all notices for view -->
         @if(count($notices)>0)
             @foreach($notices as $notice)
                 <ul class="list-group">

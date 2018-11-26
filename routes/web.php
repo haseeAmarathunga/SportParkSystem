@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// pass controller function to views
+//pagecontroller function
 Route::get('/','PagesController@getHome');
 Route::get('/about','PagesController@getAbout');
 Route::get('/contact','PagesController@getContact');
@@ -22,20 +23,19 @@ Route::get('/signup','PagesController@getSignup');
 Route::get('/next','PagesController@getNext');
 Route::get('/staffupdate','PagesController@getStaffUpdate');
 Route::get('/notices','MessagesController@viewNotices');
-
-
-
 Route::get('/staffpasschange','PagesController@getStaffPassChange');
 Route::get('/messageinbox','PagesController@getMessageInbox');
-
 Route::get('/AdminLogin','PagesController@getAdminLogin');
 Route::get('/StaffLogin','PagesController@getStaffLogin');
 Route::get('/customers','PagesController@getCustomers');
+Route::get('/staffnextreg','PagesController@getStaffNext');
+//end of pagecontroller function
+
 Route::get('/viewadminstaff','StaffController@getStaffAdmin');
 
 Route::get('/messages','MainController@getMessages');
 Route::get('/staffreg','MainController@StaffReg');
-Route::get('/staffnextreg','PagesController@getStaffNext');
+
 Route::post('/staffreg/finish','StaffController@submit');
 
 Route::get('/customers','CustomerController@getCustomers');

@@ -28,9 +28,8 @@
 	<!--//web font-->
 
     <script src=js/app.js></script>
-
-
 </head>
+
 <body>
 
 	<!-- show the showcase plugins in different site -->
@@ -152,7 +151,7 @@
 
             </div>
         </div>
-
+	<!-- end of the side bar --> 
 
 
 <!-- footer -->
@@ -163,6 +162,7 @@
 				<h4>Keep Updated On Social Media</h4>
 				<div class="social">
 					<ul>
+						<!-- social media icon with links -->
 						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -175,6 +175,7 @@
 			<div class="clearfix"> </div>
 		</div>
 		<div class="agile-nav">
+			<!-- menu links bottom -->
 			<ul>
             <li class="{{Request::is('home') ? 'active' : ''}}"><a href='home'>Home</a></li>
             <li class="{{Request::is('contact') ? 'active' : ''}}"><a href='contact'>Contact</a></li>

@@ -1,4 +1,4 @@
-<!-- include main layout -->
+<!-- customer dashboard menu -->
 @extends('layouts.app')
 
 @section('content')
@@ -34,7 +34,7 @@
         <div class="alert alert-danger">
         <h3><span class="glyphicon glyphicon-envelope"></span> Latest Announcement</h3>
         <hr>
-        
+        <!-- show the latest notice  -->
         @if(count($notices)>0)
             @foreach($notices as $notice)
                 <ul class="list-group">
@@ -43,19 +43,24 @@
                     
                 </ul>
                 @break
+                <!-- use break for only show one notice -->
             @endforeach
         @endif
         </div>
         <hr>
     <div class="alert alert-info">
+    <!-- show the customer details -->
     @if(count($customers)>0)
+        <!-- get all customers -->
         @foreach($customers as $customer)
+            <!-- give the loggedin customer using if condition -->
             @if($customer->username==Auth::user()->username)
             <h3>
             <a href="/customers"><span class="glyphicon glyphicon-user"></span> My Profile</h3></a>
             <hr>
             <h4>Bio details : </h4><br/>
                 <ul class="list-group">
+                    <!-- show that loggedin customer basic details -->
                     <li class="list-group-item">FirstName : <b>{{$customer->firstname}}</b></li>
                     <li class="list-group-item">LastName : <b>{{$customer->lastname}}</b></li>
                     <li class="list-group-item">NIC : <b>{{$customer->nic}}</b></li>
@@ -66,6 +71,7 @@
                     <a href="/updatecustomer"><b>Edit <span class="glyphicon glyphicon-edit"></span></b></a></li>
                     </li>
                     <hr>
+                    <!-- btn for change password -->
                     <a href="/customerpasschange"><b>Change Password <span class="glyphicon glyphicon-lock"></span></b></a></li>
                    
                 </ul>
@@ -73,6 +79,7 @@
         @endforeach
     @endif
     <hr>
+    <!-- show the pricing package customer that choose -->
     @if(count($packages)>0)
         @foreach($packages as $package)
             @if($package->username==Auth::user()->username)
@@ -90,6 +97,7 @@
 
 @endif
 
+<!-- buttons -->
 <a href="notices"><button class="btn btn-primary btn-lg btn-block">View All Notices</button></a>
 <a href="plans"><button class="btn btn-success btn-lg btn-block">Add/Edit Package</button></a>
 

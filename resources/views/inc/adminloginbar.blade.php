@@ -4,11 +4,9 @@
 		
 	<div class="login-form">
     <!-- show the error message, if login details incorrect -->
-    <!-- @if(isset(Auth::user()->email))
-        <script>window.location="/adminmenu";</script>
-    @endif -->
+
     
-    <!-- if that functions return any errors it will show the errors -->
+    <!-- if that functions return any session errors it will show here -->
     @if($message=Session::get('error'))
     <div class="alert alert-danger alert-block">
         <button type="button" class="close" data-dismiss="alert"></button>
@@ -16,6 +14,7 @@
     </div>
     @endif
     
+    <!-- show the other error in here(ex:both passwords are not macthed!) -->
     @if(count($errors)>0)
         <div class="alert alert-danger">
             <ul>
@@ -34,16 +33,19 @@
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <!-- show the text field -->
                 {{Form::text('username','',['class'=>'form-control','placeholder'=>'Username','required'])}}           
             </div>
         </div>
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <!-- show password field -->
                 {{Form::password('password',['class'=>'form-control','placeholder'=>'Password','required'])}}              
             </div>
         </div>        
         <div class="form-group">
+            <!-- show login button -->
             {{Form::submit('Login',['class'=>'btn btn-warning btn-block'])}}
         </div>
         <div class="clearfix">

@@ -10,7 +10,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="{{Request::is('home') ? 'active' : ''}}"><a href="{{url('home')}}">Home</a></li>
-
+      <!-- use active keyword for highlight that menu  -->
       <li class="{{Request::is('contact') ? 'active' : ''}}"><a href="{{url('contact')}}">Contact</a></li>
       <!-- show only for customers -->
       @if(Request::is('customers'))

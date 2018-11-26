@@ -17,10 +17,11 @@
 
 <!-- view the staff meber profile with all the details -->
 @if(isset(Auth::user()->username))
-
-    @section('sidebar')
+<!-- sidebar for view the profile of staff member -->
+@section('sidebar')
     @if(count($staffs)>0)
         @foreach($staffs as $staff)
+            <!-- get the loggedin staff member details -->
             @if($staff->username==Auth::user()->username)
             <div class="alert alert-info"><h3>
             <a href="/staffs"><span class="glyphicon glyphicon-user"></span> My Profile</h3></a>
@@ -50,13 +51,14 @@
 <script>window.location="/StaffLogin";</script>
 @endif
 
+<!-- butttons -->
 <a href="/messageinbox"><button class="btn btn-primary btn-lg btn-block">Messages</button></a>
 <a href="/viewcustomer"><button class="btn btn-warning btn-lg btn-block">Customers Profile</button></a>
 <hr>
 <div class="alert alert-default">
-        <h3><span class="glyphicon glyphicon-envelope"></span> Latest Announcement</h3>
-        <hr>
-        
+    <h3><span class="glyphicon glyphicon-envelope"></span> Latest Announcement</h3>
+    <hr>
+        <!-- show the laset annoucement notice -->
         @if(count($notices)>0)
             @foreach($notices as $notice)
                 <ul class="list-group">

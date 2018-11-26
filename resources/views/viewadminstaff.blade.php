@@ -13,20 +13,23 @@
 <div>
 <a href="/adminmenu"><button class="btn btn-default">back</button></a></div><hr>
 
+<!-- sidebar for message -->
 @section('sidebar')
 <h3><span class="glyphicon glyphicon-envelope"></span> Send Messages</h3>
 <hr>
-{!! Form::open(['url'=>'/newmessage']) !!}
+{!! Form::open(['url'=>'/newmessageadmin']) !!}
 <div class="form-group">
     {{Form::label('sender','Sender')}}
     <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-user"></i></span>
+    <!-- sender name automattically filled as loggedin user -->
     <input type="text" class="form-control" name="sender" id="sender" placeholder="sender"readonly value={{Auth::user()->username}}>
 </div></div>
 <div class="form-group">
    {{Form::label('reciever','Reciever')}}
     <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-user"></i></span>
+    <!-- reciever username -->
     <input type="text" class="form-control" name="reciever" id="reciever" placeholder="Reciever Username">
 </div></div>
 
@@ -34,6 +37,7 @@
    {{Form::label('message','Message')}}
     <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+    <!-- message -->
     <input type="textarea" class="form-control" name="message" id="message" placeholder="Enter Message">
 </div></div>
 
@@ -54,6 +58,7 @@
     <th>Address</th>
     <th></th>
 </tr>
+<!-- view customer details as table field -->
 @if(count($staffs)>0)
     
     @foreach($staffs as $staff)
