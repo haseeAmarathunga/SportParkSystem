@@ -73,7 +73,7 @@
 
 
 <div class="col-md-12 form-group"><div class ="col-md-6"></div>
-    <button type="submit" class="btn btn-primary"> Pay & Bill </button>
+    <button type="submit" class="btn btn-primary"> ...Pay & Bill... </button>
 </div>
 
 
