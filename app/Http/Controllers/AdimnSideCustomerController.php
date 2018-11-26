@@ -97,7 +97,7 @@ class AdimnSideCustomerController extends Controller
       }
 
       public function payment($nic){
-        return view('Admin.payment');
+        return view('Admin.payment',compact('nic'));
       }
 
       public function delete(){
