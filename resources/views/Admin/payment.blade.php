@@ -20,14 +20,14 @@
 
 <div>
 <h1>payment</h1>
- <form method="post" action= "{{url('/Mark')}}" >
+ <form method="post" action= "{{url('/pay')}}" >
 
    {{csrf_field()}}
 
 
 <div  class=" col-md-12 form-group">
   <label for="type">NIC:</label>
-  <input type="text" class="form-control" id="type" name ="nic" value = >
+  <input type="text" class="form-control" id="type" name ="nic" value ={{$nic}} >
 </div>
 
 <div class="col-md-12 form-group">
