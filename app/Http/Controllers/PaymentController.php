@@ -98,37 +98,48 @@ class PaymentController extends Controller
 
     function pdf($id,$nic,$type,$pfm,$date,$fee)
     {
-     $pdf = \App::make('dompdf.wrapper');
-     $pdf->loadHTML($this->convert_customer_data_to_html($id,$nic,$type,$pfm,$date,$fee));
-     return $pdf->stream();
+         $pdf = \App::make('dompdf.wrapper');
+         $pdf->loadHTML($this->convert_customer_data_to_html($id,$nic,$type,$pfm,$date,$fee));
+         return $pdf->stream();
     }
 
     function convert_customer_data_to_html($id,$nic,$type,$pfm,$date,$fee)
     {
      //$customer_data = $this->get_customer_data();
      $output = '
-     <h3 align="center">Customer Data</h3>
+       <h1><center>---------------------------------------------------------------------------------------</center> </h1>
+     ###################INVOICE#######################INVOICE################INVOICE###########
+       ###################INVOICE#######################INVOICE################INVOICE###########
+       <br>
+     <h3 align="center"><b>BLUE FEATHER SPORT PARK</b></h3>
+     ###################INVOICE#######################INVOICE################INVOICE###########
+       ###################INVOICE#######################INVOICE################INVOICE###########
+         <h1><center>---------------------------------------------------------------------------------------</center> </h1>
+      BILL NUMBER >>> <b> '.$id.' </b>
+      <br>
+      CUSTOMER NIC >>> <b> '.$nic.' </b>.....................................................................DATE >> <b>'.$date.'</b><br><br><br>
      <table width="100%" style="border-collapse: collapse; border: 0px;">
       <tr>
-    <th style="border: 1px solid; padding:12px;" width="20%">Name</th>
-    <th style="border: 1px solid; padding:12px;" width="30%">Address</th>
-    <th style="border: 1px solid; padding:12px;" width="15%">City</th>
-    <th style="border: 1px solid; padding:12px;" width="15%">Postal Code</th>
-    <th style="border: 1px solid; padding:12px;" width="20%">Country</th>
+    <th style="border: 1px solid; padding:12px;" width="20%">TYPE</th>
+    <th style="border: 1px solid; padding:12px;" width="30%">PAYMENT FOR MONTH</th>
+    <th style="border: 1px solid; padding:12px;" width="15%">TOTAL FEE</th>
+
    </tr>
      ';
 
       $output .= '
       <tr>
-       <td style="border: 1px solid; padding:12px;">'.$id.'</td>
-       <td style="border: 1px solid; padding:12px;">'.$nic.'</td>
+
        <td style="border: 1px solid; padding:12px;">'.$type.'</td>
        <td style="border: 1px solid; padding:12px;">'.$pfm.'</td>
-       <td style="border: 1px solid; padding:12px;">'.$date.'</td>
+       <td style="border: 1px solid; padding:12px;">RS '.$fee.' /=</td>
       </tr>
       ';
 
      $output .= '</table>';
+
+     $output .= '<br><br><center><h1>$$ PAIED $$</h1></center><br>Signature -: .....................................';
+       $output .= '  <h1><center>---------------------------------------------------------------------------------------</center> </h1>';
      return $output;
     }
 }
