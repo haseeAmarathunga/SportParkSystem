@@ -107,14 +107,14 @@ class PaymentController extends Controller
     {
      //$customer_data = $this->get_customer_data();
      $output = '
-       <h1><center>---------------------------------------------------------------------------------------</center> </h1>
+
      ###################INVOICE#######################INVOICE################INVOICE###########
        ###################INVOICE#######################INVOICE################INVOICE###########
        <br>
      <h3 align="center"><b>BLUE FEATHER SPORT PARK</b></h3>
      ###################INVOICE#######################INVOICE################INVOICE###########
        ###################INVOICE#######################INVOICE################INVOICE###########
-         <h1><center>---------------------------------------------------------------------------------------</center> </h1>
+     <br><br><br><br>
       BILL NUMBER >>> <b> '.$id.' </b>
       <br>
       CUSTOMER NIC >>> <b> '.$nic.' </b>.....................................................................DATE >> <b>'.$date.'</b><br><br><br>
@@ -136,10 +136,11 @@ class PaymentController extends Controller
       </tr>
       ';
 
-     $output .= '</table>';
+     $output .= '</table><br>';
 
      $output .= '<br><br><center><h1>$$ PAIED $$</h1></center><br>Signature -: .....................................';
-       $output .= '  <h1><center>---------------------------------------------------------------------------------------</center> </h1>';
+       $output .= '  <h4><center>===============================THANK YOU====================================</center> </h4>';
+            $output .= ' <br> Address - No 16/1,<br> 1st Lane ,<br>Bandaranayake Mw Katubedda,<br> Moratuwa.<br>Tele - +(94) 11 254 152 ';
      return $output;
     }
 }
