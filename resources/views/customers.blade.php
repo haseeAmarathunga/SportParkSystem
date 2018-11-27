@@ -98,7 +98,14 @@
 @endif
 
 <!-- buttons -->
-<a href="notices"><button class="btn btn-primary btn-lg btn-block">View All Notices</button></a>
-<a href="plans"><button class="btn btn-success btn-lg btn-block">Add/Edit Package</button></a>
+<div class="navbar-header">
+<a href="{{url('notices')}}">
+<img src="img/icon/notice.png" width="200" height="120"></a>
+</div>
+
+<div class="navbar-header">
+<a href="{{url('plans')}}">
+<img src="img/icon/package.png" width="200" height="120"></a>
+</div>
 
 @endsection
