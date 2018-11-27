@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Customer;
 use App\Scheduls;
+use App\payment;
 class AdimnSideCustomerController extends Controller
 {
      public function index()     {
@@ -97,7 +98,10 @@ class AdimnSideCustomerController extends Controller
       }
 
       public function payment($nic){
-        return view('Admin.payment');
+          $data = payment::select('id','nic','type','pfm','date','fee')
+                            ->where('nic' ,'=',$nic)
+                            ->paginate(100);
+                  return view('Admin.payment',compact('nic','data'));
       }
 
       public function delete(){
