@@ -11,6 +11,7 @@
 |
 */
 // pass controller function to views
+
 //pagecontroller function
 Route::get('/','PagesController@getHome');
 Route::get('/about','PagesController@getAbout');
