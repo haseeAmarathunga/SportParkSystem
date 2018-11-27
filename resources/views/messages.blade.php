@@ -1,10 +1,13 @@
 <!-- include main layout -->
 
 @extends('layouts.app')
-
-@if(isset(Auth::user()->username))
 @section('content')
-<h1>Messages</h1>
+@if(isset(Auth::user()->username))
+
+<a href="/adminmenu"><button class="btn btn-default">back</button></a><hr>
+
+
+<h3>Messages</h3>
 
 <!-- show all the messages from forum -->
 

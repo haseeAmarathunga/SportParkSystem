@@ -77,11 +77,12 @@
 <!-- end of sidebar -->
 
 <!-- buttons -->
-<!-- message button -->
+<!-- manage customers button -->
 <div class="navbar-header">
-<a href="messages">
-<img src="img/icon/message.png" width="200" height="120"></a>
+<a href="{{url('customersopp')}}">
+<img src="img/icon/customer.png" width="200" height="120"></a>
 </div>
+
 <!-- staff registration button -->
 <div class="navbar-header">
 <a href="staffreg">
@@ -93,11 +94,12 @@
 <img src="img/icon/staff.png" width="200" height="120"></a>
 </div>
 
-<!-- manage customers button -->
+<!-- message button -->
 <div class="navbar-header">
-<a href="{{url('customersopp')}}">
-<img src="img/icon/customer.png" width="200" height="120"></a>
+<a href="messages">
+<img src="img/icon/message.png" width="200" height="120"></a>
 </div>
+
 
 <!-- group allocation btn -->
 <div class="navbar-header">
