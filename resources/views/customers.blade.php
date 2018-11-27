@@ -100,12 +100,12 @@
 <!-- buttons -->
 <div class="navbar-header">
 <a href="{{url('notices')}}">
-<img src="img/icon/notice.png" width="200" height="120"></a>
+<img src="img/icon/notice.png" width="250" height="150"></a>
 </div>
 
 <div class="navbar-header">
 <a href="{{url('plans')}}">
-<img src="img/icon/package.png" width="200" height="120"></a>
+<img src="img/icon/package.png" width="250" height="150"></a>
 </div>
 
 @endsection
