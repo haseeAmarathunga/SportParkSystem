@@ -131,7 +131,7 @@ class addscheduleController extends Controller
        <br>
      <h3 align="center"><b>BLUE FEATHER SPORT PARK</b></h3>
      ########################Scheduls###################Scheduls################Scheduls###########
-       ###################INVOICE#######################INVOICE#################Scheduls##########
+       ###################Scheduls#####################Scheduls################Scheduls##########
      <br><br><br><br>
 
       CUSTOMER NIC >>> <b> '.$nic.' </b></b><br><br><br>
