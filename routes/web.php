@@ -107,3 +107,5 @@ Route::get('/print_bill/{id}/{nic}/{type}/{pfm}/{date}/{fee}','PaymentController
 //print Scheduls
 //cus_print_sch/'.$data1.'/'.$data2.'/'.$data3.'/'.$data4.'/'.$data5.'/'.$data6.'/'.$data7
 Route::get('cus_print_sch/{nic}','addscheduleController@printsche');
+//cus_mark_sch/'.$val['nic']
+Route::get('/cus_mark_sch/{nic}','MarkController@viewAttendence');

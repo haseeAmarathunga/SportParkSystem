@@ -22,19 +22,19 @@
 
 
 <div class="container">
-  <nav class="navbar ">    
+  <nav class="navbar ">
     <ul class="nav navbar-nav">
 
-     
+
     </ul>
     <div class="col-sm-4"></div>
-    <form class="navbar-form navbar-left" action="/action_page.php">
-      <div class="form-group">
-        <input type="date" class="form-control" placeholder="Add Date">
+
+      <div >
+        <a class="btn btn-default" href="{{url('/cus_mark_sch/'.$val['nic'])}}"> Search Attendence</a>
       </div>
-      <button type="submit" class="btn btn-success">Search Attendence</button>
-    </form>
-  
+
+
+
 </nav>
 
 
