@@ -46,18 +46,14 @@
 
     @endif
 
-    @endsection
+@endsection
 @else
 <script>window.location="/StaffLogin";</script>
 @endif
 
 <!-- butttons -->
-<a href="/messageinbox"><button class="btn btn-primary btn-lg btn-block">Messages</button></a>
-<a href="/viewcustomer"><button class="btn btn-warning btn-lg btn-block">Customers Profile</button></a>
-<hr>
 <div class="alert alert-default">
-    <h3><span class="glyphicon glyphicon-envelope"></span> Latest Announcement</h3>
-    <hr>
+<h3><span class="glyphicon glyphicon-envelope"></span> Latest Announcement</h3>
         <!-- show the laset annoucement notice -->
         @if(count($notices)>0)
             @foreach($notices as $notice)
@@ -69,6 +65,19 @@
                 @break
             @endforeach
         @endif
-        </div>
-        <hr>
+</div>
+
+
+<div class="navbar-header">
+<a href="{{url('messageinbox')}}">
+<img src="img/icon/messages.png" width="250" height="150"></a>
+</div>
+
+<div class="navbar-header">
+<a href="{{url('viewcustomer')}}">
+<img src="img/icon/customers.png" width="250" height="150"></a>
+</div>
+
+
+
 @endsection

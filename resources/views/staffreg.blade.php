@@ -5,7 +5,10 @@
 <img src="img/c.jpg">
 
 @section('sidebar')
+
 <div class="well">
+<a href="/adminmenu"><button class="btn btn-default">back</button></a><hr>
+
 <!-- add login details for register staff -->
 <div>
 <h3>Staff Registration</h3>

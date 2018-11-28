@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\payment;
 use Illuminate\Http\Request;
-
+use \PDF;
 class PaymentController extends Controller
 {
     /**
@@ -34,16 +34,16 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
       $this->validate($request, [ 'type' =>  'required', 'type' =>  'required', 'pfm'  =>  'required', 'date' =>  'required' ,'fee' =>  'required']);
-                                  $student = new payment([
-                                    'nic'    =>  $request->get('nic'),
-                                    'type'     =>  $request->get('type'),
-                                    'pfm'     =>  $request->get('pfm'),
-                                    'date'     =>  $request->get('date'),
-                                    'fee'     =>  $request->get('fee'),
-                                        // =>  $nic1
-                                  ]);
-                                   $student->save();
-                                   return redirect('/cus_payment/'.$request->get('nic'))->with('success','Payment is success ...!');
+        $student = new payment([
+            'nic'    =>  $request->get('nic'),
+            'type'     =>  $request->get('type'),
+            'pfm'     =>  $request->get('pfm'),
+            'date'     =>  $request->get('date'),
+            'fee'     =>  $request->get('fee'),
+            // =>  $nic1
+        ]);
+        $student->save();
+        return redirect('/cus_payment/'.$request->get('nic'))->with('success','Payment is success ...!');
 
     }
 
