@@ -99,7 +99,7 @@ class CustomerController extends Controller
         $user=User::where('username','=',$username)->get();
 
         //save that customer
-        if(count($user==1)){
+        if(count($user)==1){
             $customer->save();
             //redirect to the home page
             return redirect('/home')->with('success','Registered successfull!');
