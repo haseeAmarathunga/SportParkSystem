@@ -62,12 +62,13 @@
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-<button ><a href="{{url('/cus_print_sch/'.$val['nic'])}}" class="btn btn-primary btn-block btn-success">Print Scheduls</a></button>
+<br><br><br>
+
 
 
 </div>
 <div class ="col-md-8 well ">
-  <div >  <h3><b><center> View Scheduls </center></b></h3></div><hr>
+  <div >  <h3><b><center> View Scheduls <button ><a href="{{url('/cus_print_sch/'.$val['nic'])}}" class="btn btn-primary btn-block btn-success">Print Scheduls</a></button></center></b></h3></div><hr>
 
   <div class=" col-md-5 bg-danger " ><center><i><b>Sunday</b></i></center></div>
   <div class=" col-md-7 bg-success text-white " >.</div>

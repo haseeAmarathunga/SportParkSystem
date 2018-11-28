@@ -134,7 +134,7 @@ class addscheduleController extends Controller
        ###################Scheduls#####################Scheduls################Scheduls##########
      <br><br><br><br>
 
-      CUSTOMER NIC >>> <b> '.$nic.' </b></b><br><br><br>
+      CUSTOMER NIC >>> <b> '.$nic.'___________________________ VALIRD UNTIL : ................................ </b></b><br><br><br>
       <center><b>Sunday</b></center>
      <table width="100%" style="border-collapse: collapse; border: 0px;">
       <tr>
