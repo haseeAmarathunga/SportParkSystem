@@ -138,7 +138,7 @@ class PaymentController extends Controller
 
      $output .= '</table><br>';
 
-     $output .= '<br><br><center><h1>$$ PAIED $$</h1></center><br>Signature -: .....................................';
+     $output .= '<br><br><center><h1>$$ PAID $$</h1></center><br>Signature -: .....................................';
        $output .= '  <h4><center>===============================THANK YOU====================================</center> </h4>';
             $output .= ' <br> Address - No 16/1,<br> 1st Lane ,<br>Bandaranayake Mw Katubedda,<br> Moratuwa.<br>Tele - +(94) 11 254 152 ';
      return $output;

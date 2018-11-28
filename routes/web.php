@@ -103,3 +103,6 @@ Route::resource('/Mark','MarkController');
 Route::resource('/pay','PaymentController');
 //print Bill
 Route::get('/print_bill/{id}/{nic}/{type}/{pfm}/{date}/{fee}','PaymentController@pdf');
+//print Scheduls
+//cus_print_sch/'.$data1.'/'.$data2.'/'.$data3.'/'.$data4.'/'.$data5.'/'.$data6.'/'.$data7
+Route::get('cus_print_sch/{nic}','addscheduleController@printsche');
