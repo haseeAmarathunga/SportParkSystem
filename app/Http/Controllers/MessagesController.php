@@ -7,6 +7,7 @@ use App\Message;
 use App\Inbox;
 use App\Customer;
 use App\Notice;
+use Mail;
 class MessagesController extends Controller
 {
     //validate details
@@ -35,7 +36,7 @@ class MessagesController extends Controller
         return view('messages')->with('messages',$messages);
     }
 
-    public function sendMessage()
+    public function sendMessage(Request $request)
     {
         $this->validate($request,[
             'sender'=>'required',
@@ -51,6 +52,25 @@ class MessagesController extends Controller
 
         //save message
         $inbox->save();
+    }
+
+    public function sendMessageCustomer(Request $request)
+    {
+        $this->validate($request,[
+            'sender'=>'required',
+            'reciever'=>'required',
+            'message'=>'required'
+        ]);
+
+        //create new message
+        $inbox=new Inbox;
+        $inbox->sender = $request->input('sender');
+        $inbox->reciever = $request->input('reciever');
+        $inbox->message = $request->input('message');
+
+        //save message
+        $inbox->save();
+        return redirect('viewcustomer')->with('success','Messaged success!');
     }
 
     public function replyMessage(Request $request)
@@ -150,6 +170,32 @@ class MessagesController extends Controller
         \DB::delete($sql);
         return redirect()->to('/adminmenu');
         
+    }
+
+    function sendEmail(Request $request)
+    {
+        $this->validate($request,[
+            'reply'=>'required',
+            'email'=>'required',
+            'name'=>'required'
+        ]); 
+        $email=$request->input('email');
+        $reply=$request->input('reply');
+        $name=$request->input('name');
+
+        $data=array('email'=>"$name",'body'=>"$reply");
+        Mail::send('email.mail',$data,function($message) use ($email,$name){
+            $message->to($email,$name)
+                    ->subject('BlueFether Web Forum Reply');
+            $message->from('bluefether96@gmail.com','BlueFether');
+        });
+  
+        $sql="DELETE FROM Messages WHERE email='$email'";
+        \DB::delete($sql);
+        return redirect('messages')->with('success','Email send successfull!');
+
+        
+
     }
 
 }

@@ -7,7 +7,7 @@
 <a href="/adminmenu"><button class="btn btn-default">back</button></a><hr>
 
 
-<h3>Messages</h3>
+<h3>Forum Messages</h3>
 
 <!-- show all the messages from forum -->
 
@@ -18,10 +18,15 @@
             <li class="list-group-item">Email : {{$message->email}}</li>
             <li class="list-group-item">Message : {{$message->message}}</li>
             <div class="well">
-            <form>
+            {!! Form::open(['url'=>'/sendemail']) !!}
+            To:<input type="text" name="email" readonly value="{{$message->email}}">
+            <b><input type="text" name="name" readonly value="{{$message->name}}"></b>
+            
             <input type="textarea" class="form-control" name='reply' 
-            placeholder="Ente reply message">
-            <a href=""><button class="btn btn-primary">Reply</button></a>
+            placeholder="Enter reply message">
+            
+            <button id="submit" class="btn btn-warning">Reply</button>
+            {!! Form::close() !!}
             </div>
         </ul>
     @endforeach
@@ -31,8 +36,9 @@
 @endsection
 
 @section('sidebar')
+<hr>
+<img src="img/1.jpg">
 @parent
-<p>This is a pharagraph.</p>
 @endsection
 
 @else

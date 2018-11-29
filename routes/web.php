@@ -51,9 +51,12 @@ Route::get('/viewcustomer','StaffController@getCustomerUsers');
 Route::POST('/messagereply','MessagesController@replyMessage');
 Route::POST('/newmessageadmin','MessagesController@NewMessageadmin');
 Route::POST('/newmessagestaff','MessagesController@NewMessagestaff');
+Route::POST('newmessage','MessagesController@sendMessageCustomer');
 Route::POST('/addnotice','MessagesController@addNotice');
 
 Route::POST('/deletenotice','MessagesController@deleteNotice');
+//sendemail
+Route::POST('/sendemail','MessagesController@sendEmail');
 
 Route::post('AdminLogin/checklogin','MainController@checklogin');
 Route::get('/adminmenu','MainController@successlogin');
