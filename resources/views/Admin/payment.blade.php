@@ -52,11 +52,11 @@
   <option  value="May">May</option>
   <option  value="June">June</option>
   <option  value="July">July</option>
-  <option  value="August"></option>
-  <option  value="September"></option>
-  <option  value="October"></option>
-  <option  value="November"></option>
-  <option  value="December"></option>
+  <option  value="August">August</option>
+  <option  value="September">September</option>
+  <option  value="October">October</option>
+  <option  value="November">November</option>
+  <option  value="December">December</option>
 </select>
 </div>
 
@@ -85,7 +85,7 @@
     <thead>
       <tr>
         <th>Bill No </th>
-        <th>Date</th>
+        <th>......Date........</th>
         <th>Type </th>
         <th>Print Bill </th>
       </tr>
@@ -94,7 +94,7 @@
       @foreach($data as $row1)
       <tr>
         <td>{{$row1['id']}}</td>
-        <td>{{$row1['data']}}</td>
+        <td>{{$row1['date']}}</td>
         <td>{{$row1['type']}}</td>
         <td><a href="{{url('/print_bill/'.$row1['id'].'/'.$row1['nic'].'/'.$row1['type'].'/'.$row1['pfm'].'/'.$row1['date'].'/'.$row1['fee'])}}" class="btn btn-primary btn-block btn-danger">Print</a></td>
       </tr>

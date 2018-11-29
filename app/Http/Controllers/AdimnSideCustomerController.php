@@ -108,6 +108,8 @@ class AdimnSideCustomerController extends Controller
         return view('Admin.delete');
       }
 
+    
+
 
 
 }

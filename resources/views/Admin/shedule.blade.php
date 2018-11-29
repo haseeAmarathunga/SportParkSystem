@@ -32,12 +32,41 @@
 
   <div class="form-group">
     <label for="type">Item Type:</label>
-    <input type="text" class="form-control" id="type" name ="type1">
+    <select name="type1" class="form-control">
+    <option  value="Leg_Press">Leg Press</option>
+    <option  value="Leg_Extension">Leg Extension</option>
+    <option value="Chest_Press">Chest Press</option>
+    <option  value="Triceps_Press">Triceps Press</option>
+    <option  value="Seated_Row">Seated Row</option>
+    <option  value="Cable_Crossover">Cable Crossover</option>
+    <option  value="Precor_Upright_Bike">Precor Upright Bike</option>
+    <option  value="Precor_Crosstrainer_Elliptical">Precor Crosstrainer Elliptical</option>
+    <option  value="Precor_Treadmill">Precor Treadmill</option>
+    <option  value="Stairmaster_Step_Mill">Stairmaster Step Mill</option>
+    <option  value="Smith_Machine">Smith Machine</option>
+    <option  value="Olympic_Flat_Bench">Olympic Flat Bench</option>
+    <option  value="Squat_Rack">Squat Rack</option>
+    <option  value="Squat_Rack">Squat Rack</option>
+  </select>
+
   </div>
 
   <div class="form-group">
     <label for="group">Item Group:</label>
-    <input type="text" class="form-control" id="group" name = "group1">
+    <select name="group1" class="form-control">
+    <option  value="10-317.5-lbs">10-317.5 lbs</option>
+    <option  value="10-257.5-lbs">10-257.5 lbs</option>
+    <option value="5-75">5-75</option>
+    <option  value="20-200-lbs">20-200 lbs</option>
+    <option  value="14-programs,25-resistance-levels">14 programs, 25 resistance levels</option>
+    <option  value="Up-to-12-m.p.h.&incline_15°">Up to 12 m.p.h. & incline 15°</option>
+    <option  value="500g">500g</option>
+    <option  value="1kg">1kg</option>
+    <option  value="2kg">2kg</option>
+    <option  value="5kg">5kg</option>
+    <option  value="10kg">10kg</option>
+    <option  value="20kg">20kg</option>
+  </select>
   </div>
 
 

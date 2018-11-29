@@ -86,6 +86,16 @@ class MarkController extends Controller
 
     }
 
+
+    public function viewAttendence($nic){
+      $attendence = mark::select('type','group','time','date')
+                        ->where('nic' ,'=',$nic)
+                        ->paginate(100);
+      return view('Admin.viewAttendencedata',compact('attendence'));
+    }
+
+
+
     /**
      * Display the specified resource.
      *
