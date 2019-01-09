@@ -72,7 +72,7 @@
 							<p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p>
 						</div>
 						<div class="buy-button">
-							<a class="popup-with-zoom-anim">Buy Now</a>
+							<a class="popup-with-zoom-anim">BuyNow</a>
 						</div>
 					</div>
 				</div>
@@ -94,7 +94,7 @@
 							<p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p>
 						</div>
 						<div class="buy-button">
-							<a class="popup-with-zoom-anim" >Buy Now</a>
+							<a class="popup-with-zoom-anim" >BuyNow</a>
 						</div>
 					</div>
 				</div>
