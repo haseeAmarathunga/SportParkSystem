@@ -17,10 +17,11 @@
 
 <!-- view the staff meber profile with all the details -->
 @if(isset(Auth::user()->username))
-
-    @section('sidebar')
+<!-- sidebar for view the profile of staff member -->
+@section('sidebar')
     @if(count($staffs)>0)
         @foreach($staffs as $staff)
+            <!-- get the loggedin staff member details -->
             @if($staff->username==Auth::user()->username)
             <div class="alert alert-info"><h3>
             <a href="/staffs"><span class="glyphicon glyphicon-user"></span> My Profile</h3></a>
@@ -45,11 +46,38 @@
 
     @endif
 
-    @endsection
+@endsection
 @else
 <script>window.location="/StaffLogin";</script>
 @endif
 
-<a href="/messageinbox"><button class="btn btn-success">Messages</button></a>
+<!-- butttons -->
+<div class="alert alert-default">
+<h3><span class="glyphicon glyphicon-envelope"></span> Latest Announcement</h3>
+        <!-- show the laset annoucement notice -->
+        @if(count($notices)>0)
+            @foreach($notices as $notice)
+                <ul class="list-group">
+                    <li class="list-group-item">{{$notice->sender}} : {{$notice->created_at}}</li>
+                    <li class="list-group-item">Notice : <b>{{$notice->message}}</b></li>
+                    
+                </ul>
+                @break
+            @endforeach
+        @endif
+</div>
+
+
+<div class="navbar-header">
+<a href="{{url('messageinbox')}}">
+<img src="img/icon/messages.png" width="250" height="150"></a>
+</div>
+
+<div class="navbar-header">
+<a href="{{url('viewcustomer')}}">
+<img src="img/icon/customers.png" width="250" height="150"></a>
+</div>
+
+
 
 @endsection

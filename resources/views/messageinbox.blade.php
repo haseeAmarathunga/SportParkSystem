@@ -26,6 +26,7 @@
                     -->
 
                 </ul>
+                <!-- form for reply to messages -->
                 {!! Form::open(['url'=>'/messagereply']) !!}
                 <input type="text" name="sender" id="sender" readonly
                 value={{$inb->reciever}}>
@@ -36,9 +37,7 @@
                 id="message" placeholder="Enter Reply..." required>
                 <button class="btn btn-warning"type="submit">Reply <span class="glyphicon glyphicon-send"></span></button>
                 
-                {!! Form::close() !!}
-
-        
+                {!! Form::close() !!}       
                 
             @endif
             
@@ -53,6 +52,35 @@
 <div>
 <a href="/staffs"><button class="btn btn-default">back</button></a></div><hr>
 <h3><span class="glyphicon glyphicon-envelope"></span> Send Messages</h3>
+<hr>
+<!-- form for send new messages -->
+{!! Form::open(['url'=>'/newmessagestaff']) !!}
+<div class="form-group">
+    {{Form::label('sender','Sender')}}
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+    <input type="text" class="form-control" name="sender" id="sender" placeholder="sender"readonly value={{$inb->reciever}}>
+</div></div>
+<div class="form-group">
+   {{Form::label('reciever','Reciever')}}
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+    <!-- reciever text field -->
+    <input type="text" class="form-control" name="reciever" id="reciever" placeholder="Reciever">
+</div></div>
+
+<div class="form-group">
+   {{Form::label('message','Message')}}
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+    <!-- message textarea field -->
+    <input type="textarea" class="form-control" name="message" id="message" placeholder="Enter Message">
+</div></div>
+
+<button class="btn btn-success"type="submit">Send <span class="glyphicon glyphicon-send"></span></button>
+                
+{!! Form::close() !!}
+
 
 
 @endsection

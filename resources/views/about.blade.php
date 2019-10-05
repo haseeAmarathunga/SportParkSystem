@@ -6,6 +6,6 @@
 <!-- contact -->
 
 
-<!-- //contact -->
-
+<!-- show that place in map -->
+<img src="img/map.png">
 @endsection

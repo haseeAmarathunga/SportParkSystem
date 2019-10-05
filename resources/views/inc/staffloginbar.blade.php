@@ -2,19 +2,16 @@
     <div class="well">
 		
 	<div class="login-form">
-    <!-- show the error message, if login details incorrect -->
-    <!-- @if(isset(Auth::user()->email))
-        <script>window.location="/staffmenu";</script>
-    @endif -->
     
-    <!-- show the all error messages -->
+    <!-- show the all session error messages -->
     @if($message=Session::get('error'))
     <div class="alert alert-danger alert-block">
         <button type="button" class="close" data-dismiss="alert"></button>
         <strong>{{$message}}</strong>
     </div>
     @endif
-    
+
+    <!-- show the error message, if login details incorrect -->
     @if(count($errors)>0)
         <div class="alert alert-danger">
             <ul>
@@ -32,16 +29,19 @@
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <!-- username text field -->
                 {{Form::text('username','',['class'=>'form-control','placeholder'=>'Email','required'])}}           
             </div>
         </div>
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <!-- password text field -->
                 {{Form::password('password',['class'=>'form-control','placeholder'=>'Password','required'])}}              
             </div>
         </div>        
         <div class="form-group">
+            <!-- submit text field -->
             {{Form::submit('Login',['class'=>'btn btn-success btn-block'])}}
         </div>
         <div class="clearfix">

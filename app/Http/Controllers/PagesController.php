@@ -60,10 +60,16 @@ class PagesController extends Controller
         return view('staffpasschange');
     }
 
+    public function getCustomersPassChange(){
+        return view('customerpasschange');
+    }
+
+    public function getCustomerUpdate(){
+        return view('updatecustomer');
+    }
+
     public function getMessageInbox(){
         return view('messageinbox');
     }
-
-
     
 }

@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Validator;
 use Auth;
 use App\Message;
+use App\Customer;
+use App\Notice;
+use App\Staff;
+use App\Group;
 //admin controller
 class MainController extends Controller
 {
@@ -34,9 +38,11 @@ class MainController extends Controller
             return back()->with('error','Wrong Login Details!');
         }
     }
+
     function successlogin() //if the login details are correct it go to adminMenu
     {
-        return view('adminmenu');
+        $notices=Notice::orderby('id','desc')->get();
+        return view('adminmenu')->with('notices',$notices);
     }
 
     function logout() //function for logout 
@@ -61,4 +67,29 @@ class MainController extends Controller
     }
 
 
+    public function allocateGroup(){
+        $staffs=Staff::all();
+        return view('groupallocate')->with('staffs',$staffs);
+    }
+
+    public function addTrainer(Request $request)
+    {
+        $this->validate($request,[
+            'groupname'=>'required',
+            'leadtrainer'=>'required',
+
+        ]);
+        
+        $input=$request->only('groupname','leadtrainer');
+
+        $groupno=$input['groupname'];
+        $leadtrainer=$input['leadtrainer'];
+        
+        $gro=array('Badminton','Weight Lifting','Sports','Exercices');
+        
+        $groupname=$gro[$groupno];
+        $sql="update groups SET leadtrainer='$leadtrainer' WHERE name='$groupname'";
+        \DB::update($sql);
+        return redirect()->to('/groupallocate')->with('success','Added Successfull!');
+    }
 }

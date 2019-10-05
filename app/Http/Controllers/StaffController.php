@@ -7,6 +7,9 @@ use Auth;
 use Validator;
 use App\Staff;
 use App\User;
+use App\Customer;
+use App\Package;
+use App\Notice;
 class StaffController extends Controller
 {
     //validate and check the login details
@@ -46,7 +49,7 @@ class StaffController extends Controller
     }
 
     //validate and store staff login details in users table
-    function store()
+    function store(Request $request)
     {
         $this->validate(request(),[
             'username'=>'required',
@@ -58,17 +61,16 @@ class StaffController extends Controller
         
         //if a user is staff user then the isadmin is true
         //so any time isadmin give true from staff registration form
-        $pass1=request('password');
-        $pass2=request('password_confirmation');
-
-        //check if both passwords are same
-        if($pass1==$pass2){
+        $username=$request->input('username');
+        $user=User::where('username','=',$username)->get();
+    
+        if(count($user)==0){
             $user=User::create(request(['username','email','password','isadmin']));
             auth()->login($user);
             return redirect()->to('/staffnextreg');
         }
         else{
-            return redirect()->to('/staffreg');
+            return redirect()->to('/staffreg')->with('success','This username is already taken!');
         }
 
     }
@@ -102,12 +104,16 @@ class StaffController extends Controller
         $staff->address = $request->input('address');
         $staff->mobile = $request->input('mobile');
       
-
-        //save staff member
-        $staff->save();
-
-        //redirect
-        return redirect('/adminmenu')->with('success','Register successfull!');
+        $username=$staff->username;
+        $user=User::where('username','=',$username)->get();
+        if(count($user)==1){
+            //save staff member
+            $staff->save();
+            return redirect('/adminmenu')->with('success','Registered successfull!');
+        }
+        else{
+            return redirect('/staffnextreg')->with('success','This username is already taken!');
+        }
     }
 
     public function update(Request $request)
@@ -170,7 +176,8 @@ class StaffController extends Controller
 
     public function getStaff(){
         $staffs=Staff::all();
-        return view('staffs')->with('staffs',$staffs);
+        $notices=Notice::orderby('id','desc')->get();
+        return view('staffs')->with(compact('staffs','notices'),$staffs,$notices);
     }
 
     public function getStaff2(){
@@ -181,6 +188,18 @@ class StaffController extends Controller
     public function getStaff3(){
         $staffs=Staff::all();
         return view('staffpasschange')->with('staffs',$staffs);
+    }
+
+    function getCustomerUsers(){
+        $customers=Customer::all();
+        $packages=Package::all();
+        return view('viewcustomer')->with(compact('customers','packages'),$customers,$packages);
+    }
+
+    function getStaffAdmin()
+    {
+        $staffs=Staff::all();
+        return view('viewadminstaff')->with('staffs',$staffs);
     }
 
 

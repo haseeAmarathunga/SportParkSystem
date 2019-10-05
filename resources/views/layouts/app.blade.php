@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Sport Park</title>
 
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
 
     <link href="/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
 	<!-- //for Coaches css -->
@@ -27,10 +27,9 @@
 	<link href="//fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 	<!--//web font-->
 
-    <script src=/js/app.js></script>
-
-
+    <script src=js/app.js></script>
 </head>
+
 <body>
 
 	<!-- show the showcase plugins in different site -->
@@ -52,7 +51,7 @@
 
 	   <!-- sidebar boostrap properties -->
         <div class="row">
-            <div class="col-md-12 col-lg-12">
+            <div class="col-md-8 col-lg-8">
                 @include('inc.messages')
 
                 @yield('content')
@@ -70,6 +69,18 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('viewcustomer'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('viewadminstaff'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('groupallocate'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('staffs'))
         			@include('inc.sidebar')
     			@endif
@@ -78,7 +89,23 @@
         			@include('inc.sidebar')
     			@endif
 
+				@if(Request::is('updatecustomer'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('updatecustomer'))
+        			@include('inc.sidebar')
+    			@endif
+
 				@if(Request::is('messageinbox'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('notices'))
+        			@include('inc.sidebar')
+    			@endif
+
+				@if(Request::is('messages'))
         			@include('inc.sidebar')
     			@endif
 
@@ -128,7 +155,7 @@
 
             </div>
         </div>
-
+	<!-- end of the side bar --> 
 
 
 <!-- footer -->
@@ -139,6 +166,7 @@
 				<h4>Keep Updated On Social Media</h4>
 				<div class="social">
 					<ul>
+						<!-- social media icon with links -->
 						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -151,6 +179,7 @@
 			<div class="clearfix"> </div>
 		</div>
 		<div class="agile-nav">
+			<!-- menu links bottom -->
 			<ul>
             <li class="{{Request::is('home') ? 'active' : ''}}"><a href='home'>Home</a></li>
             <li class="{{Request::is('contact') ? 'active' : ''}}"><a href='contact'>Contact</a></li>

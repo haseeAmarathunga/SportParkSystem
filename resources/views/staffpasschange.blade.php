@@ -47,11 +47,13 @@
 <a href="/staffs"><button class="btn btn-default">back</button></a></div><hr>
 <h3><span class="glyphicon glyphicon-lock"></span> Change password</h3>
 <hr>
-
+<!-- get all staff members -->
 @foreach($staffs as $staff)
+    <!-- choose loggedin staff member -->
     @if($staff->username==Auth::user()->username)
 {!! Form::open(['url'=>'staffs/passchange']) !!}
 
+<!-- show that session error messages here -->
 @if($message=Session::get('error'))
     <div class="alert alert-danger alert-block">
         <button type="button" class="close" data-dismiss="alert"></button>
@@ -71,6 +73,7 @@
     {{Form::label('oldpass','Old Password')}}
     <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+    <!--old password -->
     <input type="password" name="oldpassword" id="oldpassword" placeholder="Old Password"  class="form-control"  required>
 </div></div>
 
@@ -78,6 +81,7 @@
     {{Form::label('newpassword','New Password')}}
     <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+    <!-- new password -->
     <input type="password" name="password" id="password" placeholder="New Password" class="form-control" required>
 </div></div>
 
@@ -85,6 +89,7 @@
     {{Form::label('confirm','Confirm')}}
     <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+    <!-- confirm pass -->
     <input type="password" name="password_confirmation" id="password_confirmation" 
     placeholder="Confirm Password" class="form-control" required>
 </div></div>
@@ -94,6 +99,7 @@
 </div>
 
 {!! Form::close() !!}
+<!-- end of the form -->
     @endif
 @endforeach
 <hr>
